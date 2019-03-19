@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>
+	Teecko Community Day
+  </title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.23/moment-timezone-with-data-2012-2022.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .top{
+		margin: auto;
+		width: 75%;
+		text-align: center;
+		border: 1px solid black;
+		color: #ffffff;
+		background-color: #003366;
+		padding: 10px;
+	}
+	.box{
+		margin-top: 10px;
+	}
+	.box1{
+		margin: auto;
+		width: 50%;
+		text-align: center;
+		border: 1px solid black;
+		color: #ffffff;
+		background-color: #B33565;
+	}
+	.box2{
+		margin: auto;
+		width: 50%;
+		text-align: center;
+		border: 1px solid black;
+		color: #ffffff;
+		background-color: #B33565;
+	}
+	.box3{
+		margin: auto;
+		width: 50%;
+		text-align: center;
+		border: 1px solid black;
+		color: #ffffff;
+		background-color: #B33565;
+	}
+	.box4{
+		margin: auto;
+		width: 50%;
+		text-align: center;
+		border: 1px solid black;
+		color: #ffffff;
+		background-color: #B33565;
+	}
+	.box5{
+		margin: auto;
+		width: 50%;
+		text-align: center;
+		border: 1px solid black;
+		color: #ffffff;
+		background-color: #B33565;
+	}
+	.button{
+		background-color: Transparent;
+    	background-repeat:no-repeat;
+    	border: none;
+    	cursor:pointer;
+    	overflow: hidden;
+	}
+	canvas {
+		display: block;
+		position: relative;
+		zindex: 1;
+		pointer-events: none;
+	}
+	#content {
+		min-width: 800px; 
+		margin: 0 auto; 
+		max-height: 1080px;
+		position: absolute;
+	}
+  </style>
+</head>
+
+
+<body>
+<div id="content">
+ <div class="top">
+  <h2>Local Time</h2>
+  <div id="displayMoment"></div>
+ </div>
+  <div class="box">
+  <div class="box1" id="1">
+	<h3>Auckland Time</h3>
+	<p id="latlng1">-36.861102,174.780742 <button class="button" style="font-size:18px"><i class="fa fa-copy"></i></button></p>
+	<p style="padding-left:20px">GPX <i class="fa fa-android"></i>&nbsp;&nbsp;<a href="resources/Auckland/Auckland.gpx" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Auckland" href="Auckland.gpx" style="color:black">Download</a>&nbsp;&nbsp;&nbsp;&nbsp;TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Auckland/Auckland.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Auckland" target="_blank" href="Auckland.txt" style="color:black">Download</a></p>
+	<div id="startAucklandToLocal"></div>
+	<div id="timerAuckland"></div>
+  </div>
+  </div>
+  <div class="box">
+  <div class="box2" id="2">
+    <h3>Perth Time</h3>
+    <p id="latlng2">-31.954723,115.840195 <button class="button" style="font-size:18px"><i class="fa fa-copy"></i></button></p>
+	<p style="padding-left:20px">GPX <i class="fa fa-android"></i>&nbsp;&nbsp;<a href="https://www.w3schools.com/html/" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a href="https://www.w3schools.com/html/" target="_blank" style="color:black">Download</a>&nbsp;&nbsp;&nbsp;&nbsp;TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="https://www.w3schools.com/html/" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a href="https://www.w3schools.com/html/" target="_blank" style="color:black">Download</a></p>
+	<div id="startPerthToLocal"></div>
+	<div id="timerPerth"></div>
+  </div>
+  </div>
+  <div class="box">
+  <div class="box3" id="3">
+	<h3>Moscow Time</h3>
+	<p id="latlng3">55.792480,37.616598 <button class="button" style="font-size:18px"><i class="fa fa-copy"></i></button></p>
+	<p style="padding-left:20px">GPX <i class="fa fa-android"></i>&nbsp;&nbsp;<a href="https://www.w3schools.com/html/" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a href="https://www.w3schools.com/html/" target="_blank" style="color:black">Download</a>&nbsp;&nbsp;&nbsp;&nbsp;TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="https://www.w3schools.com/html/" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a href="https://www.w3schools.com/html/" target="_blank" style="color:black">Download</a></p>
+	<div id="startMoscowToLocal"></div>
+	<div id="timerMoscow"></div>
+  </div>
+  </div>
+  <div class="box">
+  <div class="box4" id="4">
+    <h3>São Paulo Time</h3>
+    <p id="latlng4">-23.528036,-46.670433 <button class="button" style="font-size:18px"><i class="fa fa-copy"></i></button></p>
+	<p style="padding-left:20px">GPX <i class="fa fa-android"></i>&nbsp;&nbsp;<a href="https://www.w3schools.com/html/" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a href="https://www.w3schools.com/html/" target="_blank" style="color:black">Download</a>&nbsp;&nbsp;&nbsp;&nbsp;TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="https://www.w3schools.com/html/" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a href="https://www.w3schools.com/html/" target="_blank" style="color:black">Download</a></p>
+	<div id="startSaoPauloToLocal"></div>
+	<div id="timerSaoPaulo"></div>
+  </div>
+  </div>
+  <div class="box">
+  <div class="box5" id="5">
+    <h3>Anchorage Time</h3>
+    <p id="latlng5">61.198510,-149.981070 <button class="button" style="font-size:18px"><i class="fa fa-copy"></i></button></p>
+	<p style="padding-left:20px">GPX <i class="fa fa-android"></i>&nbsp;&nbsp;<a href="https://www.w3schools.com/html/" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a href="https://www.w3schools.com/html/" target="_blank" style="color:black">Download</a>&nbsp;&nbsp;&nbsp;&nbsp;TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="https://www.w3schools.com/html/" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a href="https://www.w3schools.com/html/" target="_blank" style="color:black">Download</a></p>
+	<div id="startAnchorageToLocal"></div>
+	<div id="timerAnchorage"></div>
+  </div>  
+  </div>
+<script type="text/javascript">
+function globalConfetti() {
+    // globals
+    var canvas;
+    var ctx;
+    var W;
+    var H;
+    var mp = 150; //max particles
+    var particles = [];
+    var angle = 0;
+    var tiltAngle = 0;
+    var confettiActive = true;
+    var animationComplete = true;
+    var deactivationTimerHandler;
+    var reactivationTimerHandler;
+    var animationHandler;
+
+    // objects
+	
+    var particleColors = {
+        colorOptions: ["DodgerBlue", "OliveDrab", "Gold", "pink", "SlateBlue", "lightblue", "Violet", "PaleGreen", "SteelBlue", "SandyBrown", "Chocolate", "Crimson"],
+        colorIndex: 0,
+        colorIncrementer: 0,
+        colorThreshold: 10,
+        getColor: function () {
+            if (this.colorIncrementer >= 10) {
+                this.colorIncrementer = 0;
+                this.colorIndex++;
+                if (this.colorIndex >= this.colorOptions.length) {
+                    this.colorIndex = 0;
+                }
+            }
+            this.colorIncrementer++;
+            return this.colorOptions[this.colorIndex];
+        }
+    }
+
+    function confettiParticle(color) {
+        this.x = Math.random() * W; // x-coordinate
+        this.y = (Math.random() * H) - H; //y-coordinate
+        this.r = RandomFromTo(10, 30); //radius;
+        this.d = (Math.random() * mp) + 10; //density;
+        this.color = color;
+        this.tilt = Math.floor(Math.random() * 10) - 10;
+        this.tiltAngleIncremental = (Math.random() * 0.07) + .05;
+        this.tiltAngle = 0;
+
+        this.draw = function () {
+            ctx.beginPath();
+            ctx.lineWidth = this.r / 2;
+            ctx.strokeStyle = this.color;
+            ctx.moveTo(this.x + this.tilt + (this.r / 4), this.y);
+            ctx.lineTo(this.x + this.tilt, this.y + this.tilt + (this.r / 4));
+            return ctx.stroke();
+        }
+    }
+
+    $(document).ready(function () {
+        SetGlobals();
+        InitializeButton();
+        InitializeConfetti();
+
+        $(window).resize(function () {
+            W = window.innerWidth;
+            H = window.innerHeight;
+            canvas.width = W;
+            canvas.height = H;
+        });
+
+    });
+
+    function InitializeButton() {
+    	setTimeout(DeactivateConfetti, 5000);
+    }
+	
+    function SetGlobals() {
+        canvas = document.getElementById("canvas");
+        ctx = canvas.getContext("2d");
+        W = window.innerWidth;
+        H = window.innerHeight;
+        canvas.width = W;
+        canvas.height = H;
+    }
+
+    function InitializeConfetti() {
+        particles = [];
+        animationComplete = false;
+        for (var i = 0; i < mp; i++) {
+            var particleColor = particleColors.getColor();
+            particles.push(new confettiParticle(particleColor));
+        }
+        StartConfetti();
+    }
+
+    function Draw() {
+        ctx.clearRect(0, 0, W, H);
+        var results = [];
+        for (var i = 0; i < mp; i++) {
+            (function (j) {
+                results.push(particles[j].draw());
+            })(i);
+        }
+        Update();
+
+        return results;
+    }
+
+    function RandomFromTo(from, to) {
+        return Math.floor(Math.random() * (to - from + 1) + from);
+    }
+
+
+    function Update() {
+        var remainingFlakes = 0;
+        var particle;
+        angle += 0.01;
+        tiltAngle += 0.1;
+
+        for (var i = 0; i < mp; i++) {
+            particle = particles[i];
+            if (animationComplete) return;
+
+            if (!confettiActive && particle.y < -15) {
+                particle.y = H + 100;
+                continue;
+            }
+
+            stepParticle(particle, i);
+
+            if (particle.y <= H) {
+                remainingFlakes++;
+            }
+            CheckForReposition(particle, i);
+        }
+
+        if (remainingFlakes === 0) {
+            StopConfetti();
+        }
+    }
+
+    function CheckForReposition(particle, index) {
+        if ((particle.x > W + 20 || particle.x < -20 || particle.y > H) && confettiActive) {
+            if (index % 5 > 0 || index % 2 == 0) //66.67% of the flakes
+            {
+                repositionParticle(particle, Math.random() * W, -10, Math.floor(Math.random() * 10) - 10);
+            } else {
+                if (Math.sin(angle) > 0) {
+                    //Enter from the left
+                    repositionParticle(particle, -5, Math.random() * H, Math.floor(Math.random() * 10) - 10);
+                } else {
+                    //Enter from the right
+                    repositionParticle(particle, W + 5, Math.random() * H, Math.floor(Math.random() * 10) - 10);
+                }
+            }
+        }
+    }
+    function stepParticle(particle, particleIndex) {
+        particle.tiltAngle += particle.tiltAngleIncremental;
+        particle.y += (Math.cos(angle + particle.d) + 3 + particle.r / 2) / 2;
+        particle.x += Math.sin(angle);
+        particle.tilt = (Math.sin(particle.tiltAngle - (particleIndex / 3))) * 15;
+    }
+
+    function repositionParticle(particle, xCoordinate, yCoordinate, tilt) {
+        particle.x = xCoordinate;
+        particle.y = yCoordinate;
+        particle.tilt = tilt;
+    }
+
+    function StartConfetti() {
+        W = window.innerWidth;
+        H = window.innerHeight;
+        canvas.width = W;
+        canvas.height = H;
+        (function animloop() {
+            if (animationComplete) return null;
+            animationHandler = requestAnimFrame(animloop);
+            return Draw();
+        })();
+    }
+
+    function ClearTimers() {
+        clearTimeout(reactivationTimerHandler);
+        clearTimeout(animationHandler);
+    }
+
+    function DeactivateConfetti() {
+        confettiActive = false;
+        ClearTimers();
+    }
+
+    function StopConfetti() {
+        animationComplete = true;
+        if (ctx == undefined) return;
+        ctx.clearRect(0, 0, W, H);
+    }
+
+    function RestartConfetti() {
+        ClearTimers();
+        StopConfetti();
+        reactivationTimerHandler = setTimeout(function () {
+            confettiActive = true;
+            animationComplete = false;
+            InitializeConfetti();
+        }, 100);
+
+    }
+
+    window.requestAnimFrame = (function () {
+        return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function (callback) {
+            return window.setTimeout(callback, 1000 / 60);
+        };
+    })();
+}
+(function()
+{
+  // instantiate a moment object
+  //gray after expiration 6D6D6D and green during event progress 34992A for css style
+  var NowMoment = moment();
+	
+  // display value of moment object in #displayMoment div
+  var now = moment();
+  function time() {
+  var now = moment();
+  document.getElementById("displayMoment").innerHTML = now.format("DD-MM-YYYY") + "<br>" + now.format("HH:mm:ss");
+  setTimeout(time, 1000);
+  }
+  time();  
+
+  var startAuckland = moment.tz("2019-03-23 15:00", "YYYY-MM-DD HH:mm:ss", "Pacific/Auckland");
+  var stopAuckland = moment.tz("2019-03-23 18:00", "YYYY-MM-DD HH:mm:ss", "Pacific/Auckland");
+  document.getElementById("startAucklandToLocal").innerHTML = "Event starts at: <br>" + startAuckland.local().format("YYYY-MM-DD HH:mm:ss") + " (Local Time)<br><br>";
+  function counterAuckland() {
+  var now = moment.utc();
+  var distance = startAuckland.unix() - now.unix();
+  if (distance >= 0) {
+    var days = Math.floor(distance / (60 * 60 * 24));
+    var hours = Math.floor((distance % (60 * 60 * 24)) / (60 * 60));
+    var minutes = Math.floor((distance % (60 * 60)) / (60));
+    var seconds = Math.floor((distance % (60)) / 1);
+    document.getElementById("timerAuckland").innerHTML = "Event begins in: " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+	setTimeout(counterAuckland, 1000);
+  }
+  if (distance==-1) {
+    globalConfetti();
+  }
+  if (distance < 0 && distance >= startAuckland.unix() - stopAuckland.unix()) {
+    var div = document.getElementById("1");
+    div.style.backgroundColor="#34992A";
+	distance = stopAuckland.unix() - now.unix();
+	var days = Math.floor(distance / (60 * 60 * 24));
+    var hours = Math.floor((distance % (60 * 60 * 24)) / (60 * 60));
+    var minutes = Math.floor((distance % (60 * 60)) / (60));
+    var seconds = Math.floor((distance % (60)) / 1);
+	document.getElementById("timerAuckland").innerHTML = "Event in progress<br> Event ends in: " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+	setTimeout(counterAuckland, 1000);
+  }
+  if (distance < startAuckland.unix() - stopAuckland.unix()) {
+    var div = document.getElementById("1");
+    div.style.backgroundColor="#6D6D6D";
+    document.getElementById("timerAuckland").innerHTML = "Event has ended";
+  }
+}
+  counterAuckland();  
+  
+  var startPerth = moment.tz("2019-03-23 15:00", "YYYY-MM-DD HH:mm:ss", "Australia/Perth");
+  var stopPerth = moment.tz("2019-03-23 18:00", "YYYY-MM-DD HH:mm:ss", "Australia/Perth");
+  document.getElementById("startPerthToLocal").innerHTML = "Event starts at: <br>" + startPerth.local().format("YYYY-MM-DD HH:mm:ss") + " (Local Time)<br><br>";
+  function counterPerth() {
+  var now = moment.utc();
+  var distance = startPerth.unix() - now.unix();
+  if (distance >= 0) {
+    var days = Math.floor(distance / (60 * 60 * 24));
+    var hours = Math.floor((distance % (60 * 60 * 24)) / (60 * 60));
+    var minutes = Math.floor((distance % (60 * 60)) / (60));
+    var seconds = Math.floor((distance % (60)) / 1);
+    document.getElementById("timerPerth").innerHTML = "Event begins in: " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+	setTimeout(counterPerth, 1000);
+  }
+  if (distance < 0 && distance >= startPerth.unix() - stopPerth.unix()) {
+    var div = document.getElementById("1");
+    div.style.backgroundColor="#34992A";
+	distance = stopPerth.unix() - now.unix();
+	var days = Math.floor(distance / (60 * 60 * 24));
+    var hours = Math.floor((distance % (60 * 60 * 24)) / (60 * 60));
+    var minutes = Math.floor((distance % (60 * 60)) / (60));
+    var seconds = Math.floor((distance % (60)) / 1);
+	document.getElementById("timerPerth").innerHTML = "Event in progress<br> Event ends in: " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+	setTimeout(counterPerth, 1000);
+  }
+  if (distance < startPerth.unix() - stopPerth.unix()) {
+	var div = document.getElementById("1");
+    div.style.backgroundColor="#6D6D6D";
+    document.getElementById("timerPerth").innerHTML = "Event has ended";
+  }
+}
+  counterPerth(); 
+  
+  var startMoscow = moment.tz("2019-03-23 15:00", "YYYY-MM-DD HH:mm:ss", "Europe/Moscow");
+  var stopMoscow = moment.tz("2019-03-23 18:00", "YYYY-MM-DD HH:mm:ss", "Europe/Moscow");
+  document.getElementById("startMoscowToLocal").innerHTML = "Event starts at: <br>" + startMoscow.local().format("YYYY-MM-DD HH:mm:ss") + " (Local Time)<br><br>";
+  function counterMoscow() {
+  var now = moment.utc();
+  var distance = startMoscow.unix() - now.unix();
+  if (distance >= 0) {
+    var days = Math.floor(distance / (60 * 60 * 24));
+    var hours = Math.floor((distance % (60 * 60 * 24)) / (60 * 60));
+    var minutes = Math.floor((distance % (60 * 60)) / (60));
+    var seconds = Math.floor((distance % (60)) / 1);
+    document.getElementById("timerMoscow").innerHTML = "Event begins in: " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+	setTimeout(counterMoscow, 1000);
+  }
+  if (distance < 0 && distance >= startMoscow.unix() - stopMoscow.unix()) {
+	var div = document.getElementById("1");
+    div.style.backgroundColor="#34992A";
+	distance = stopMoscow.unix() - now.unix();
+	var days = Math.floor(distance / (60 * 60 * 24));
+    var hours = Math.floor((distance % (60 * 60 * 24)) / (60 * 60));
+    var minutes = Math.floor((distance % (60 * 60)) / (60));
+    var seconds = Math.floor((distance % (60)) / 1);
+	document.getElementById("timerMoscow").innerHTML = "Event in progress<br> Event ends in: " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+	setTimeout(counterMoscow, 1000);
+  }
+  if (distance < startMoscow.unix() - stopMoscow.unix()) {
+	var div = document.getElementById("1");
+    div.style.backgroundColor="#6D6D6D";
+    document.getElementById("timerMoscow").innerHTML = "Event has ended";
+  }
+}
+  counterMoscow();  
+  
+  var startSaoPaulo = moment.tz("2019-03-23 15:00", "YYYY-MM-DD HH:mm:ss", "America/Sao_Paulo");
+  var stopSaoPaulo = moment.tz("2019-03-23 18:00", "YYYY-MM-DD HH:mm:ss", "America/Sao_Paulo");
+  document.getElementById("startSaoPauloToLocal").innerHTML = "Event starts at: <br>" + startSaoPaulo.local().format("YYYY-MM-DD HH:mm:ss") + " (Local Time)<br><br>";
+  function counterSaoPaulo() {
+  var now = moment.utc();
+  var distance = startSaoPaulo.unix() - now.unix();
+  if (distance >= 0) {
+    var days = Math.floor(distance / (60 * 60 * 24));
+    var hours = Math.floor((distance % (60 * 60 * 24)) / (60 * 60));
+    var minutes = Math.floor((distance % (60 * 60)) / (60));
+    var seconds = Math.floor((distance % (60)) / 1);
+    document.getElementById("timerSaoPaulo").innerHTML = "Event begins in: " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+	setTimeout(counterSaoPaulo, 1000);
+  }
+  if (distance < 0 && distance >= startSaoPaulo.unix() - stopSaoPaulo.unix()) {
+	var div = document.getElementById("1");
+    div.style.backgroundColor="#34992A";
+	distance = stopSaoPaulo.unix() - now.unix();
+	var days = Math.floor(distance / (60 * 60 * 24));
+    var hours = Math.floor((distance % (60 * 60 * 24)) / (60 * 60));
+    var minutes = Math.floor((distance % (60 * 60)) / (60));
+    var seconds = Math.floor((distance % (60)) / 1);
+	document.getElementById("timerSaoPaulo").innerHTML = "Event in progress<br> Event ends in: " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+	setTimeout(counterSaoPaulo, 1000);
+  }
+  if (distance < startSaoPaulo.unix() - stopSaoPaulo.unix()) {
+	var div = document.getElementById("1");
+    div.style.backgroundColor="#6D6D6D";
+    document.getElementById("timerPerth").innerHTML = "Event has ended";
+  }
+}
+  counterSaoPaulo();  
+  
+  var startAnchorage = moment.tz("2019-03-23 15:00", "YYYY-MM-DD HH:mm:ss", "America/Anchorage");
+  var stopAnchorage = moment.tz("2019-03-23 18:00", "YYYY-MM-DD HH:mm:ss", "America/Anchorage");
+  document.getElementById("startAnchorageToLocal").innerHTML = "Event starts at: <br>" + startAnchorage.local().format("YYYY-MM-DD HH:mm:ss") + " (Local Time)<br><br>";
+  function counterAnchorage() {
+  var now = moment.utc();
+  var distance = startAnchorage.unix() - now.unix();
+  if (distance >= 0) {
+    var days = Math.floor(distance / (60 * 60 * 24));
+    var hours = Math.floor((distance % (60 * 60 * 24)) / (60 * 60));
+    var minutes = Math.floor((distance % (60 * 60)) / (60));
+    var seconds = Math.floor((distance % (60)) / 1);
+    document.getElementById("timerAnchorage").innerHTML = "Event begins in: " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+	setTimeout(counterAnchorage, 1000);
+  }
+  if (distance < 0 && distance >= startAnchorage.unix() - stopAnchorage.unix()) {
+	var div = document.getElementById("1");
+    div.style.backgroundColor="#34992A";
+	distance = stopAnchorage.unix() - now.unix();
+	var days = Math.floor(distance / (60 * 60 * 24));
+    var hours = Math.floor((distance % (60 * 60 * 24)) / (60 * 60));
+    var minutes = Math.floor((distance % (60 * 60)) / (60));
+    var seconds = Math.floor((distance % (60)) / 1);
+	document.getElementById("timerAnchoarge").innerHTML = "Event in progress<br> Event ends in: " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+	setTimeout(counterAnchorage, 1000);
+  }
+  if (distance < startAnchorage.unix() - stopAnchorage.unix()) {
+	var div = document.getElementById("1");
+    div.style.backgroundColor="#6D6D6D";
+    document.getElementById("timerAnchorage").innerHTML = "Event has ended";
+  }
+}
+  counterAnchorage(); 
+  
+})();
+</script>
+</div>
+<canvas id="canvas"></canvas>
+</body>
+</html>
