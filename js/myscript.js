@@ -236,7 +236,7 @@ function timerinit()
   }
   time();  
 
-  var startAuckland = moment.tz("2019-03-23 15:00", "YYYY-MM-DD HH:mm:ss", "Pacific/Auckland");
+  var startAuckland = moment.tz("2019-03-21 06:30", "YYYY-MM-DD HH:mm:ss", "Pacific/Auckland");
   var stopAuckland1 = moment.tz("2019-03-23 18:00", "YYYY-MM-DD HH:mm:ss", "Pacific/Auckland");
   var stopAuckland3 = moment.tz("2019-03-23 16:00", "YYYY-MM-DD HH:mm:ss", "Pacific/Auckland");
   var stopAuckland5 = moment.tz("2019-03-23 17:00", "YYYY-MM-DD HH:mm:ss", "Pacific/Auckland");
