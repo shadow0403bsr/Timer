@@ -69,9 +69,7 @@ canvas {
 	pointer-events: none;
 }
 #content {
-	min-width: 400px; 
 	margin: 0 auto; 
-	max-height: 1080px;
 	position: absolute;
 }
 * {

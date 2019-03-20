@@ -236,10 +236,10 @@ function timerinit()
   }
   time();  
 
-  var startAuckland = moment.tz("2019-03-21 04:27", "YYYY-MM-DD HH:mm:ss", "Pacific/Auckland");
-  var stopAuckland1 = moment.tz("2019-03-21 04:32", "YYYY-MM-DD HH:mm:ss", "Pacific/Auckland");
-  var stopAuckland3 = moment.tz("2019-03-21 04:30", "YYYY-MM-DD HH:mm:ss", "Pacific/Auckland");
-  var stopAuckland5 = moment.tz("2019-03-21 04:28", "YYYY-MM-DD HH:mm:ss", "Pacific/Auckland");
+  var startAuckland = moment.tz("2019-03-23 15:00", "YYYY-MM-DD HH:mm:ss", "Pacific/Auckland");
+  var stopAuckland1 = moment.tz("2019-03-23 18:00", "YYYY-MM-DD HH:mm:ss", "Pacific/Auckland");
+  var stopAuckland3 = moment.tz("2019-03-23 16:00", "YYYY-MM-DD HH:mm:ss", "Pacific/Auckland");
+  var stopAuckland5 = moment.tz("2019-03-23 17:00", "YYYY-MM-DD HH:mm:ss", "Pacific/Auckland");
   document.getElementById("startAucklandToLocal1").innerHTML = "Event starts at: <br>" + startAuckland.local().format("YYYY-MM-DD HH:mm:ss") + " (Local Time)<br><br>";
   document.getElementById("startAucklandToLocal3").innerHTML = "Event starts at: <br>" + startAuckland.local().format("YYYY-MM-DD HH:mm:ss") + " (Local Time)<br><br>";
   document.getElementById("startAucklandToLocal5").innerHTML = "Event starts at: <br>" + startAuckland.local().format("YYYY-MM-DD HH:mm:ss") + " (Local Time)<br><br>";
@@ -257,6 +257,7 @@ function timerinit()
 	setTimeout(counterAuckland, 1000);
   }
   if (distance1==-1) {
+	  console.log(1);
     globalConfetti();
   }
   if (distance1 < 0 && distance1 >= startAuckland.unix() - stopAuckland1.unix()) {
