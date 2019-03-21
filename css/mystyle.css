@@ -10,6 +10,7 @@ body{
 	background-color: #99373B;
 	padding: 10px;
 	margin-bottom: 20px;
+	margin-top: 10px;
 }
 .box{
 	margin-bottom: 10px;
@@ -69,6 +70,7 @@ canvas {
 	pointer-events: none;
 }
 #content {
+	max-width: 500px;
 	margin: 0 auto; 
 	position: absolute;
 }
@@ -84,21 +86,21 @@ canvas {
 }
 .tab {
 	float: left;
-	width: 30%;
+	width: 20%;
 	height: 300px;
 }
 .tab button {
 	display: block;
 	background-color: #f1f1f1;
 	color: black;
-	padding: 22px 16px;
+	padding: 10px 10px;
 	width: 100%;
 	border: none;
 	outline: none;
 	text-align: left;
 	cursor: pointer;
 	transition: 0.3s;
-	font-size: 17px;
+	font-size: 12px;
 }
 .tab button:hover {
 	background-color: #ddd;
@@ -109,7 +111,7 @@ canvas {
 .tabcontent {
 	float: left;
 	padding: 0px 12px;
-	width: 40%;
+	width: 80%;
 	border-left: none;
 	height: 300px;
 }
