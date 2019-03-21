@@ -18,12 +18,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>  
 </head>
 <body>
-
-<div class="tab">
-  <div class="top">
-  <h2>Local Time</h2>
+<div class="top">
+	<h2>Local Time</h2>
   <div id="displayMoment"></div>
-  </div>
+  <br>
+  <p style="text-align: justify; font-size: 12px;"><strong>* Local time is derived from your smarthphone / desktop time</strong><p>
+</div>
+<div class="tab">
   <button class="tablinks" onclick="openCity(event, 'HomePage')" id="defaultOpen">Home</button>
   <button class="tablinks" onclick="openCity(event, 'Route1')">Route #1</button>
   <button class="tablinks" onclick="openCity(event, 'Route2')">Route #2</button>
@@ -33,18 +34,37 @@
 </div>
 
 <div id="HomePage" class="tabcontent">
-  <h3>Welcome</h3>
-  <p>Timers for March Community Day featuring Treecko</p> 
+  <h3 style="color: #C5454C;"><strong>Countdown Timers</strong></h3>
+  <h4 style="color: #C5454C;"><strong>March Community Day</strong></h4>
+  <h4 style="color: #C5454C;"><strong>Treecko</strong></h4>
+  <h5 style="color: #C5454C;"><strong>Features:</strong></h5>
+  <ul style="color: #C5454C;">
+	<li>Date: 2019/03/23</li>
+	<li>3:00-6:00 PM local time</li>
+	<li>Exclusive Move: Frenzy Plant</li>
+	<li>¼ egg hatch distance</li>
+  </ul>
+  <h5 style="color: #C5454C;"><strong>Important Notes:</strong></h5>
+  <ul style="color: #C5454C; text-align: justify;">
+	<li>For Route #3, you play in Auckland for only 1hr</li>
+	<li>For Route #3, you reach Bangalore ½hr late so play for only 2½hr</li>
+	<li>For Route #5, you play in Auckland for only 2hr</li>
+	<li>The maximum play time = 15½hr is given by Route #3</li>
+	<li>The minimum wait time = 8hr is given by Route #2 with play time = 15hr</li>
+  </ul>
+  <footer>
+  <p style="color: #C5454C;">Created by: <strong>&#9828;DarkShadow&#9828;</strong></p>
+  </footer>
 </div>
 
 <div id="Route1" class="tabcontent">
   <div id="content">
   <div class="box">
   <div class="box1" id="11">
-	<h3>Auckland Time <span class="flag-icon flag-icon-nz"></span></h3>
+	<h4>Auckland Time <span class="flag-icon flag-icon-nz"></span></h4>
 	<p id="latlng11">-36.861102,174.780742 <button onclick="copyToClipboard('#latlng11')" class="button" style="font-size:18px"><i class="fa fa-copy"></i></button></p>
 	<p style="padding-left:20px">GPX <i class="fa fa-android"></i>&nbsp;&nbsp;<a href="https://raw.githubusercontent.com/shadow0403bsr/Timer/master/resources/Auckland/Auckland.gpx" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Auckland.gpx" href="resources/Auckland/Auckland.gpx" style="color:black">
-	Download</a>&nbsp;&nbsp;&nbsp;&nbsp;TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Auckland/Auckland.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Auckland" target="_blank" href="resources/Auckland/Auckland.txt" 
+	Download</a></p><p style="padding-left:20px">TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Auckland/Auckland.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Auckland" target="_blank" href="resources/Auckland/Auckland.txt" 
 	style="color:black">Download</a></p>
 	<div id="startAucklandToLocal1"></div>
 	<div id="timerAuckland1"></div>
@@ -52,10 +72,10 @@
   </div>
   <div class="box">
   <div class="box2" id="12">
-    <h3>Perth Time <span class="flag-icon flag-icon-au"></span></h3>
+    <h4>Perth Time <span class="flag-icon flag-icon-au"></span></h4>
 	<p id="latlng12">-31.954723,115.840195 <button onclick="copyToClipboard('#latlng12')" class="button" style="font-size:18px"><i class="fa fa-copy"></i></button></p>
 	<p style="padding-left:20px">GPX <i class="fa fa-android"></i>&nbsp;&nbsp;<a href="https://raw.githubusercontent.com/shadow0403bsr/Timer/master/resources/Perth/Perth.gpx" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Perth.gpx" href="resources/Perth/Perth.gpx" style="color:black">
-	Download</a>&nbsp;&nbsp;&nbsp;&nbsp;TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Perth/Perth.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Perth" target="_blank" href="resources/Perth/Perth.txt" 
+	Download</a></p><p style="padding-left:20px">TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Perth/Perth.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Perth" target="_blank" href="resources/Perth/Perth.txt" 
 	style="color:black">Download</a></p>
 	<div id="startPerthToLocal1"></div>
 	<div id="timerPerth1"></div>
@@ -63,10 +83,10 @@
   </div>
   <div class="box">
   <div class="box3" id="13">
-	<h3>Moscow Time <span class="flag-icon flag-icon-ru"></span></h3>
+	<h4>Moscow Time <span class="flag-icon flag-icon-ru"></span></h4>
 	<p id="latlng13">55.792480,37.616598 <button onclick="copyToClipboard('#latlng13')" class="button" style="font-size:18px"><i class="fa fa-copy"></i></button></p>
 	<p style="padding-left:20px">GPX <i class="fa fa-android"></i>&nbsp;&nbsp;<a href="https://raw.githubusercontent.com/shadow0403bsr/Timer/master/resources/Moscow/Moscow.gpx" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Moscow.gpx" href="resources/Moscow/Moscow.gpx" style="color:black">
-	Download</a>&nbsp;&nbsp;&nbsp;&nbsp;TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Moscow/Moscow.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Moscow" target="_blank" href="resources/Moscow/Moscow.txt" 
+	Download</a></p><p style="padding-left:20px">TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Moscow/Moscow.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Moscow" target="_blank" href="resources/Moscow/Moscow.txt" 
 	style="color:black">Download</a></p>
 	<div id="startMoscowToLocal1"></div>
 	<div id="timerMoscow1"></div>
@@ -74,10 +94,10 @@
   </div>
   <div class="box">
   <div class="box4" id="14">
-    <h3>São Paulo Time <span class="flag-icon flag-icon-br"></span></h3>
+    <h4>São Paulo Time <span class="flag-icon flag-icon-br"></span></h4>
 	<p id="latlng14">-23.528036,-46.670433 <button onclick="copyToClipboard('#latlng14')" class="button" style="font-size:18px"><i class="fa fa-copy"></i></button></p>
 	<p style="padding-left:20px">GPX <i class="fa fa-android"></i>&nbsp;&nbsp;<a href="https://raw.githubusercontent.com/shadow0403bsr/Timer/master/resources/SaoPaulo/SaoPaulo.gpx" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="SaoPaulo.gpx" href="resources/SaoPaulo/SaoPaulo.gpx" style="color:black">
-	Download</a>&nbsp;&nbsp;&nbsp;&nbsp;TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/SaoPaulo/SaoPaulo.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="SaoPaulo" target="_blank" href="resources/SaoPaulo/SaoPaulo.txt" 
+	Download</a></p><p style="padding-left:20px">TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/SaoPaulo/SaoPaulo.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="SaoPaulo" target="_blank" href="resources/SaoPaulo/SaoPaulo.txt" 
 	style="color:black">Download</a></p>
 	<div id="startSaoPauloToLocal1"></div>
 	<div id="timerSaoPaulo1"></div>
@@ -85,15 +105,18 @@
   </div>
   <div class="box">
   <div class="box5" id="15">
-    <h3>Anchorage Time  <span class="flag-icon flag-icon-us"></span></h3>
+    <h4>Anchorage Time  <span class="flag-icon flag-icon-us"></span></h4>
 	<p id="latlng15">61.198510,-149.981070 <button onclick="copyToClipboard('#latlng15')" class="button" style="font-size:18px"><i class="fa fa-copy"></i></button></p>
 	<p style="padding-left:20px">GPX <i class="fa fa-android"></i>&nbsp;&nbsp;<a href="https://raw.githubusercontent.com/shadow0403bsr/Timer/master/resources/Anchorage/Anchorage.gpx" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Anchorage.gpx" href="resources/Anchorage/Anchorage.gpx" style="color:black">
-	Download</a>&nbsp;&nbsp;&nbsp;&nbsp;TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Anchorage/Anchorage.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Anchorage" target="_blank" href="resources/Anchorage/Anchorage.txt" 
+	Download</a></p><p style="padding-left:20px">TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Anchorage/Anchorage.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Anchorage" target="_blank" href="resources/Anchorage/Anchorage.txt" 
 	style="color:black">Download</a></p>
 	<div id="startAnchorageToLocal1"></div>
 	<div id="timerAnchorage1"></div>
   </div>  
   </div>
+<footer>
+  <p style="color: #C5454C;">Created by: <strong>&#9828;DarkShadow&#9828;</strong></p>
+</footer>
 </div>
 </div>
 
@@ -101,10 +124,10 @@
   <div id="content">
   <div class="box">
   <div class="box1" id="21">
-	<h3>Suva Time <span class="flag-icon flag-icon-fj"></span></h3>
+	<h4>Suva Time <span class="flag-icon flag-icon-fj"></span></h4>
 	<p id="latlng21">-18.149939,178.425932 <button onclick="copyToClipboard('#latlng21')" class="button" style="font-size:18px"><i class="fa fa-copy"></i></button></p>
 	<p style="padding-left:20px">GPX <i class="fa fa-android"></i>&nbsp;&nbsp;<a href="https://raw.githubusercontent.com/shadow0403bsr/Timer/master/resources/Suva/Suva.gpx" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Suva.gpx" href="resources/Suva/Suva.gpx" style="color:black">
-	Download</a>&nbsp;&nbsp;&nbsp;&nbsp;TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Suva/Suva.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Suva" target="_blank" href="resources/Suva/Suva.txt" 
+	Download</a></p><p style="padding-left:20px">TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Suva/Suva.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Suva" target="_blank" href="resources/Suva/Suva.txt" 
 	style="color:black">Download</a></p>
 	<div id="startSuvaToLocal2"></div>
 	<div id="timerSuva2"></div>
@@ -112,10 +135,10 @@
   </div>
   <div class="box">
   <div class="box2" id="22">
-    <h3>Bangkok Time <span class="flag-icon flag-icon-th"></span></h3>
+    <h4>Bangkok Time <span class="flag-icon flag-icon-th"></span></h4>
 	<p id="latlng22">13.728304,100.540574 <button onclick="copyToClipboard('#latlng22')" class="button" style="font-size:18px"><i class="fa fa-copy"></i></button></p>
 	<p style="padding-left:20px">GPX <i class="fa fa-android"></i>&nbsp;&nbsp;<a href="https://raw.githubusercontent.com/shadow0403bsr/Timer/master/resources/Bangkok/Bangkok.gpx" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Bangkok.gpx" href="resources/Bangkok/Bangkok.gpx" style="color:black">
-	Download</a>&nbsp;&nbsp;&nbsp;&nbsp;TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Bangkok/Bangkok.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Bangkok" target="_blank" href="resources/Bangkok/Bangkok.txt" 
+	Download</a></p><p style="padding-left:20px">TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Bangkok/Bangkok.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Bangkok" target="_blank" href="resources/Bangkok/Bangkok.txt" 
 	style="color:black">Download</a></p>
 	<div id="startBangkokToLocal2"></div>
 	<div id="timerBangkok2"></div>
@@ -123,10 +146,10 @@
   </div>
   <div class="box">
   <div class="box3" id="23">
-	<h3>Helsinki Time <span class="flag-icon flag-icon-fi"></span></h3>
+	<h4>Helsinki Time <span class="flag-icon flag-icon-fi"></span></h4>
 	<p id="latlng23">0.172991,24.945227 <button onclick="copyToClipboard('#latlng23')" class="button" style="font-size:18px"><i class="fa fa-copy"></i></button></p>
 	<p style="padding-left:20px">GPX <i class="fa fa-android"></i>&nbsp;&nbsp;<a href="https://raw.githubusercontent.com/shadow0403bsr/Timer/master/resources/Helsinki/Helsinki.gpx" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Helsinki.gpx" href="resources/Helsinki/Helsinki.gpx" style="color:black">
-	Download</a>&nbsp;&nbsp;&nbsp;&nbsp;TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Helsinki/Helsinki.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Helsinki" target="_blank" href="resources/Helsinki/Helsinki.txt" 
+	Download</a></p><p style="padding-left:20px">TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Helsinki/Helsinki.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Helsinki" target="_blank" href="resources/Helsinki/Helsinki.txt" 
 	style="color:black">Download</a></p>
 	<div id="startHelsinkiToLocal2"></div>
 	<div id="timerHelsinki2"></div>
@@ -134,10 +157,10 @@
   </div>
   <div class="box">
   <div class="box4" id="24">
-    <h3>São Paulo Time  <span class="flag-icon flag-icon-br"></span></h3>
+    <h4>São Paulo Time  <span class="flag-icon flag-icon-br"></span></h4>
 	<p id="latlng24">-23.528036,-46.670433 <button onclick="copyToClipboard('#latlng24')" class="button" style="font-size:18px"><i class="fa fa-copy"></i></button></p>
 	<p style="padding-left:20px">GPX <i class="fa fa-android"></i>&nbsp;&nbsp;<a href="https://raw.githubusercontent.com/shadow0403bsr/Timer/master/resources/SaoPaulo/SaoPaulo.gpx" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="SaoPaulo.gpx" href="resources/SaoPaulo/SaoPaulo.gpx" style="color:black">
-	Download</a>&nbsp;&nbsp;&nbsp;&nbsp;TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/SaoPaulo/SaoPaulo.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="SaoPaulo" target="_blank" href="resources/SaoPaulo/SaoPaulo.txt" 
+	Download</a></p><p style="padding-left:20px">TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/SaoPaulo/SaoPaulo.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="SaoPaulo" target="_blank" href="resources/SaoPaulo/SaoPaulo.txt" 
 	style="color:black">Download</a></p>
 	<div id="startSaoPauloToLocal2"></div>
 	<div id="timerSaoPaulo2"></div>
@@ -145,15 +168,18 @@
   </div>
   <div class="box">
   <div class="box5" id="25">
-    <h3>Anchorage Time <span class="flag-icon flag-icon-us"></span></h3>
+    <h4>Anchorage Time <span class="flag-icon flag-icon-us"></span></h4>
 	<p id="latlng25">61.198510,-149.981070 <button onclick="copyToClipboard('#latlng25')" class="button" style="font-size:18px"><i class="fa fa-copy"></i></button></p>
 	<p style="padding-left:20px">GPX <i class="fa fa-android"></i>&nbsp;&nbsp;<a href="https://raw.githubusercontent.com/shadow0403bsr/Timer/master/resources/Anchorage/Anchorage.gpx" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Anchorage.gpx" href="resources/Anchorage/Anchorage.gpx" style="color:black">
-	Download</a>&nbsp;&nbsp;&nbsp;&nbsp;TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Anchorage/Anchorage.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Anchorage" target="_blank" href="resources/Anchorage/Anchorage.txt" 
+	Download</a></p><p style="padding-left:20px">TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Anchorage/Anchorage.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Anchorage" target="_blank" href="resources/Anchorage/Anchorage.txt" 
 	style="color:black">Download</a></p>
 	<div id="startAnchorageToLocal2"></div>
 	<div id="timerAnchorage2"></div>
   </div>  
   </div>
+<footer>
+  <p style="color: #C5454C;">Created by: <strong>&#9828;DarkShadow&#9828;</strong></p>
+</footer>
 </div> 
 </div>
 
@@ -161,10 +187,10 @@
   <div id="content">
   <div class="box">
   <div class="box1" id="31">
-	<h3>Auckland Time <span class="flag-icon flag-icon-nz"></span></h3>
+	<h4>Auckland Time <span class="flag-icon flag-icon-nz"></span></h4>
 	<p id="latlng31">-36.861102,174.780742 <button onclick="copyToClipboard('#latlng31')" class="button" style="font-size:18px"><i class="fa fa-copy"></i></button></p>
 	<p style="padding-left:20px">GPX <i class="fa fa-android"></i>&nbsp;&nbsp;<a href="https://raw.githubusercontent.com/shadow0403bsr/Timer/master/resources/Auckland/Auckland.gpx" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Auckland.gpx" href="resources/Auckland/Auckland.gpx" style="color:black">
-	Download</a>&nbsp;&nbsp;&nbsp;&nbsp;TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Auckland/Auckland.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Auckland" target="_blank" href="resources/Auckland/Auckland.txt" 
+	Download</a></p><p style="padding-left:20px">TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Auckland/Auckland.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Auckland" target="_blank" href="resources/Auckland/Auckland.txt" 
 	style="color:black">Download</a></p>
 	<div id="startAucklandToLocal3"></div>
 	<div id="timerAuckland3"></div>
@@ -172,10 +198,10 @@
   </div>
   <div class="box">
   <div class="box2" id="32">
-    <h3>Brisbane Time <span class="flag-icon flag-icon-au"></span></h3>
+    <h4>Brisbane Time <span class="flag-icon flag-icon-au"></span></h4>
 	<p id="latlng32">-27.475008,153.025677 <button onclick="copyToClipboard('#latlng32')" class="button" style="font-size:18px"><i class="fa fa-copy"></i></button></p>
 	<p style="padding-left:20px">GPX <i class="fa fa-android"></i>&nbsp;&nbsp;<a href="https://raw.githubusercontent.com/shadow0403bsr/Timer/master/resources/Brisbane/Brisbane.gpx" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Brisbane.gpx" href="resources/Brisbane/Brisbane.gpx" style="color:black">
-	Download</a>&nbsp;&nbsp;&nbsp;&nbsp;TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Brisbane/Brisbane.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Brisbane" target="_blank" href="resources/Brisbane/Brisbane.txt" 
+	Download</a></p><p style="padding-left:20px">TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Brisbane/Brisbane.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Brisbane" target="_blank" href="resources/Brisbane/Brisbane.txt" 
 	style="color:black">Download</a></p>
 	<div id="startBrisbaneToLocal3"></div>
 	<div id="timerBrisbane3"></div>
@@ -183,10 +209,10 @@
   </div>
   <div class="box">
   <div class="box3" id="33">
-	<h3>Bangalore Time <span class="flag-icon flag-icon-in"></span></h3>
+	<h4>Bangalore Time <span class="flag-icon flag-icon-in"></span></h4>
 	<p id="latlng33">12.953544,77.586251 <button onclick="copyToClipboard('#latlng33')" class="button" style="font-size:18px"><i class="fa fa-copy"></i></button></p>
 	<p style="padding-left:20px">GPX <i class="fa fa-android"></i>&nbsp;&nbsp;<a href="https://raw.githubusercontent.com/shadow0403bsr/Timer/master/resources/Bangalore/Bangalore.gpx" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Bangalore.gpx" href="resources/Bangalore/Bangalore.gpx" style="color:black">
-	Download</a>&nbsp;&nbsp;&nbsp;&nbsp;TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Bangalore/Bangalore.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Bangalore" target="_blank" href="resources/Bangalore/Bangalore.txt" 
+	Download</a></p><p style="padding-left:20px">TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Bangalore/Bangalore.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Bangalore" target="_blank" href="resources/Bangalore/Bangalore.txt" 
 	style="color:black">Download</a></p>
 	<div id="startBangaloreToLocal3"></div>
 	<div id="timerBangalore3"></div>
@@ -194,10 +220,10 @@
   </div>
   <div class="box">
   <div class="box4" id="34">
-    <h3>London Time <span class="flag-icon flag-icon-gb"></span></h3>
+    <h4>London Time <span class="flag-icon flag-icon-gb"></span></h4>
 	<p id="latlng34">51.512470,-0.158841 <button onclick="copyToClipboard('#latlng34')" class="button" style="font-size:18px"><i class="fa fa-copy"></i></button></p>
 	<p style="padding-left:20px">GPX <i class="fa fa-android"></i>&nbsp;&nbsp;<a href="https://raw.githubusercontent.com/shadow0403bsr/Timer/master/resources/London/London.gpx" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="London.gpx" href="resources/London/London.gpx" style="color:black">
-	Download</a>&nbsp;&nbsp;&nbsp;&nbsp;TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/London/London.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="London" target="_blank" href="resources/London/London.txt" 
+	Download</a></p><p style="padding-left:20px">TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/London/London.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="London" target="_blank" href="resources/London/London.txt" 
 	style="color:black">Download</a></p>
 	<div id="startLondonToLocal3"></div>
 	<div id="timerLondon3"></div>
@@ -205,10 +231,10 @@
   </div>
   <div class="box">
   <div class="box5" id="35">
-    <h3>Chicago Time <span class="flag-icon flag-icon-us"></span></h3>
+    <h4>Chicago Time <span class="flag-icon flag-icon-us"></span></h4>
 	<p id="latlng35">41.884191,-87.620050 <button onclick="copyToClipboard('#latlng35')" class="button" style="font-size:18px"><i class="fa fa-copy"></i></button></p>
 	<p style="padding-left:20px">GPX <i class="fa fa-android"></i>&nbsp;&nbsp;<a href="https://raw.githubusercontent.com/shadow0403bsr/Timer/master/resources/Chicago/Chicago.gpx" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Chicago.gpx" href="resources/Chicago/Chicago.gpx" style="color:black">
-	Download</a>&nbsp;&nbsp;&nbsp;&nbsp;TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Chicago/Chicago.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Chicago" target="_blank" href="resources/Chicago/Chicago.txt" 
+	Download</a></p><p style="padding-left:20px">TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Chicago/Chicago.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Chicago" target="_blank" href="resources/Chicago/Chicago.txt" 
 	style="color:black">Download</a></p>
 	<div id="startChicagoToLocal3"></div>
 	<div id="timerChicago3"></div>
@@ -216,15 +242,18 @@
   </div>
   <div class="box">
   <div class="box5" id="36">
-    <h3>Honolulu Time <span class="flag-icon flag-icon-us"></span></h3>
+    <h4>Honolulu Time <span class="flag-icon flag-icon-us"></span></h4>
 	<p id="latlng36">21.284711,-157.845453 <button onclick="copyToClipboard('#latlng36')" class="button" style="font-size:18px"><i class="fa fa-copy"></i></button></p>
 	<p style="padding-left:20px">GPX <i class="fa fa-android"></i>&nbsp;&nbsp;<a href="https://raw.githubusercontent.com/shadow0403bsr/Timer/master/resources/Honolulu/Honolulu.gpx" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Honolulu.gpx" href="resources/Honolulu/Honolulu.gpx" style="color:black">
-	Download</a>&nbsp;&nbsp;&nbsp;&nbsp;TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Honolulu/Honolulu.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Honolulu" target="_blank" href="resources/Honolulu/Honolulu.txt" 
+	Download</a></p><p style="padding-left:20px">TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Honolulu/Honolulu.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Honolulu" target="_blank" href="resources/Honolulu/Honolulu.txt" 
 	style="color:black">Download</a></p>
 	<div id="startHonoluluToLocal3"></div>
 	<div id="timerHonolulu3"></div>
   </div>  
   </div>
+<footer>
+  <p style="color: #C5454C;">Created by: <strong>&#9828;DarkShadow&#9828;</strong></p>
+</footer>
 </div>
 </div>
 
@@ -232,10 +261,10 @@
   <div id="content">
   <div class="box">
   <div class="box1" id="41">
-	<h3>Sydney Time <span class="flag-icon flag-icon-au"></span></h3>
+	<h4>Sydney Time <span class="flag-icon flag-icon-au"></span></h4>
 	<p id="latlng41">-33.858126,151.215593 <button onclick="copyToClipboard('#latlng41')" class="button" style="font-size:18px"><i class="fa fa-copy"></i></button></p>
 	<p style="padding-left:20px">GPX <i class="fa fa-android"></i>&nbsp;&nbsp;<a href="https://raw.githubusercontent.com/shadow0403bsr/Timer/master/resources/Sydney/Sydney.gpx" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Sydney.gpx" href="resources/Sydney/Sydney.gpx" style="color:black">
-	Download</a>&nbsp;&nbsp;&nbsp;&nbsp;TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Sydney/Sydney.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Sydney" target="_blank" href="resources/Sydney/Sydney.txt" 
+	Download</a></p><p style="padding-left:20px">TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Sydney/Sydney.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Sydney" target="_blank" href="resources/Sydney/Sydney.txt" 
 	style="color:black">Download</a></p>
 	<div id="startSydneyToLocal4"></div>
 	<div id="timerSydney4"></div>
@@ -243,10 +272,10 @@
   </div>
   <div class="box">
   <div class="box2" id="42">
-    <h3>Dhaka Time <span class="flag-icon flag-icon-bd"></span></h3>
+    <h4>Dhaka Time <span class="flag-icon flag-icon-bd"></span></h4>
 	<p id="latlng42">23.737634,90.399332 <button onclick="copyToClipboard('#latlng42')" class="button" style="font-size:18px"><i class="fa fa-copy"></i></button></p>
 	<p style="padding-left:20px">GPX <i class="fa fa-android"></i>&nbsp;&nbsp;<a href="https://raw.githubusercontent.com/shadow0403bsr/Timer/master/resources/Dhaka/Dhaka.gpx" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Dhaka.gpx" href="resources/Dhaka/Dhaka.gpx" style="color:black">
-	Download</a>&nbsp;&nbsp;&nbsp;&nbsp;TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Dhaka/Dhaka.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Dhaka" target="_blank" href="resources/Dhaka/Dhaka.txt" 
+	Download</a></p><p style="padding-left:20px">TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Dhaka/Dhaka.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Dhaka" target="_blank" href="resources/Dhaka/Dhaka.txt" 
 	style="color:black">Download</a></p>
 	<div id="startDhakaToLocal4"></div>
 	<div id="timerDhaka4"></div>
@@ -254,10 +283,10 @@
   </div>
   <div class="box">
   <div class="box3" id="43">
-	<h3>Paris Time <span class="flag-icon flag-icon-fr"></span></h3>
+	<h4>Paris Time <span class="flag-icon flag-icon-fr"></span></h4>
 	<p id="latlng43">48.863794,2.322457 <button onclick="copyToClipboard('#latlng43')" class="button" style="font-size:18px"><i class="fa fa-copy"></i></button></p>
 	<p style="padding-left:20px">GPX <i class="fa fa-android"></i>&nbsp;&nbsp;<a href="https://raw.githubusercontent.com/shadow0403bsr/Timer/master/resources/Paris/Paris.gpx" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Paris.gpx" href="resources/Paris/Paris.gpx" style="color:black">
-	Download</a>&nbsp;&nbsp;&nbsp;&nbsp;TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Paris/Paris.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Paris" target="_blank" href="resources/Paris/Paris.txt" 
+	Download</a></p><p style="padding-left:20px">TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Paris/Paris.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Paris" target="_blank" href="resources/Paris/Paris.txt" 
 	style="color:black">Download</a></p>
 	<div id="startParisToLocal4"></div>
 	<div id="timerParis4"></div>
@@ -265,10 +294,10 @@
   </div>
   <div class="box">
   <div class="box4" id="44">
-    <h3>New York Time <span class="flag-icon flag-icon-us"></span></h3>
+    <h4>New York Time <span class="flag-icon flag-icon-us"></span></h4>
 	<p id="latlng44">40.797225,-73.950904 <button onclick="copyToClipboard('#latlng44')" class="button" style="font-size:18px"><i class="fa fa-copy"></i></button></p>
 	<p style="padding-left:20px">GPX <i class="fa fa-android"></i>&nbsp;&nbsp;<a href="https://raw.githubusercontent.com/shadow0403bsr/Timer/master/resources/NewYork/NewYork.gpx" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="NewYork.gpx" href="resources/NewYork/NewYork.gpx" style="color:black">
-	Download</a>&nbsp;&nbsp;&nbsp;&nbsp;TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/NewYork/NewYork.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="NewYork" target="_blank" href="resources/NewYork/NewYork.txt" 
+	Download</a></p><p style="padding-left:20px">TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/NewYork/NewYork.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="NewYork" target="_blank" href="resources/NewYork/NewYork.txt" 
 	style="color:black">Download</a></p>
 	<div id="startNewYorkToLocal4"></div>
 	<div id="timerNewYork4"></div>
@@ -276,26 +305,29 @@
   </div>
   <div class="box">
   <div class="box5" id="45">
-    <h3>Honolulu Time <span class="flag-icon flag-icon-us"></span></h3>
+    <h4>Honolulu Time <span class="flag-icon flag-icon-us"></span></h4>
 	<p id="latlng45">21.284711,-157.845453 <button onclick="copyToClipboard('#latlng45')" class="button" style="font-size:18px"><i class="fa fa-copy"></i></button></p>
 	<p style="padding-left:20px">GPX <i class="fa fa-android"></i>&nbsp;&nbsp;<a href="https://raw.githubusercontent.com/shadow0403bsr/Timer/master/resources/Honolulu/Honolulu.gpx" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Honolulu.gpx" href="resources/Honolulu/Honolulu.gpx" style="color:black">
-	Download</a>&nbsp;&nbsp;&nbsp;&nbsp;TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Honolulu/Honolulu.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Honolulu" target="_blank" href="resources/Honolulu/Honolulu.txt" 
+	Download</a></p><p style="padding-left:20px">TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Honolulu/Honolulu.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Honolulu" target="_blank" href="resources/Honolulu/Honolulu.txt" 
 	style="color:black">Download</a></p>
 	<div id="startHonoluluToLocal4"></div>
 	<div id="timerHonolulu4"></div>
   </div>  
   </div>
-</div>>
+<footer>
+  <p style="color: #C5454C;">Created by: <strong>&#9828;DarkShadow&#9828;</strong></p>
+</footer>
+  </div>
 </div>
 
 <div id="Route5" class="tabcontent">
   <div id="content">
   <div class="box">
   <div class="box1" id="51">
-	<h3>Auckland Time <span class="flag-icon flag-icon-nz"></span></h3>
+	<h4>Auckland Time <span class="flag-icon flag-icon-nz"></span></h4>
 	<p id="latlng51">-36.861102,174.780742 <button onclick="copyToClipboard('#latlng51')" class="button" style="font-size:18px"><i class="fa fa-copy"></i></button></p>
 	<p style="padding-left:20px">GPX <i class="fa fa-android"></i>&nbsp;&nbsp;<a href="https://raw.githubusercontent.com/shadow0403bsr/Timer/master/resources/Auckland/Auckland.gpx" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Auckland.gpx" href="resources/Auckland/Auckland.gpx" style="color:black">
-	Download</a>&nbsp;&nbsp;&nbsp;&nbsp;TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Auckland/Auckland.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Auckland" target="_blank" href="resources/Auckland/Auckland.txt" 
+	Download</a></p><p style="padding-left:20px">TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Auckland/Auckland.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Auckland" target="_blank" href="resources/Auckland/Auckland.txt" 
 	style="color:black">Download</a></p>
 	<div id="startAucklandToLocal5"></div>
 	<div id="timerAuckland5"></div>
@@ -303,10 +335,10 @@
   </div>
   <div class="box">
   <div class="box2" id="52">
-    <h3>Tokyo Time <span class="flag-icon flag-icon-jp"></span></h3>
+    <h4>Tokyo Time <span class="flag-icon flag-icon-jp"></span></h4>
 	<p id="latlng52">35.686593,139.689654 <button onclick="copyToClipboard('#latlng52')" class="button" style="font-size:18px"><i class="fa fa-copy"></i></button></p>
 	<p style="padding-left:20px">GPX <i class="fa fa-android"></i>&nbsp;&nbsp;<a href="https://raw.githubusercontent.com/shadow0403bsr/Timer/master/resources/Tokyo/Tokyo.gpx" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Tokyo.gpx" href="resources/Tokyo/Tokyo.gpx" style="color:black">
-	Download</a>&nbsp;&nbsp;&nbsp;&nbsp;TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Tokyo/Tokyo.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Tokyo" target="_blank" href="resources/Tokyo/Tokyo.txt" 
+	Download</a></p><p style="padding-left:20px">TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Tokyo/Tokyo.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Tokyo" target="_blank" href="resources/Tokyo/Tokyo.txt" 
 	style="color:black">Download</a></p>
 	<div id="startTokyoToLocal5"></div>
 	<div id="timerTokyo5"></div>
@@ -314,10 +346,10 @@
   </div>
   <div class="box">
   <div class="box3" id="53">
-	<h3>Moscow Time <span class="flag-icon flag-icon-ru"></span></h3>
+	<h4>Moscow Time <span class="flag-icon flag-icon-ru"></span></h4>
 	<p id="latlng53">55.792480,37.616598 <button onclick="copyToClipboard('#latlng53')" class="button" style="font-size:18px"><i class="fa fa-copy"></i></button></p>
 	<p style="padding-left:20px">GPX <i class="fa fa-android"></i>&nbsp;&nbsp;<a href="https://raw.githubusercontent.com/shadow0403bsr/Timer/master/resources/Moscow/Moscow.gpx" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Moscow.gpx" href="resources/Moscow/Moscow.gpx" style="color:black">
-	Download</a>&nbsp;&nbsp;&nbsp;&nbsp;TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Moscow/Moscow.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Moscow" target="_blank" href="resources/Moscow/Moscow.txt" 
+	Download</a></p><p style="padding-left:20px">TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Moscow/Moscow.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Moscow" target="_blank" href="resources/Moscow/Moscow.txt" 
 	style="color:black">Download</a></p>
 	<div id="startMoscowToLocal5"></div>
 	<div id="timerMoscow5"></div>
@@ -325,10 +357,10 @@
   </div>
   <div class="box">
   <div class="box4" id="54">
-    <h3>São Paulo Time <span class="flag-icon flag-icon-br"></span></h3>
+    <h4>São Paulo Time <span class="flag-icon flag-icon-br"></span></h4>
 	<p id="latlng54">-23.528036,-46.670433 <button onclick="copyToClipboard('#latlng54')" class="button" style="font-size:18px"><i class="fa fa-copy"></i></button></p>
 	<p style="padding-left:20px">GPX <i class="fa fa-android"></i>&nbsp;&nbsp;<a href="https://raw.githubusercontent.com/shadow0403bsr/Timer/master/resources/SaoPaulo/SaoPaulo.gpx" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="SaoPaulo.gpx" href="resources/SaoPaulo/SaoPaulo.gpx" style="color:black">
-	Download</a>&nbsp;&nbsp;&nbsp;&nbsp;TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/SaoPaulo/SaoPaulo.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="SaoPaulo" target="_blank" href="resources/SaoPaulo/SaoPaulo.txt" 
+	Download</a></p><p style="padding-left:20px">TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/SaoPaulo/SaoPaulo.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="SaoPaulo" target="_blank" href="resources/SaoPaulo/SaoPaulo.txt" 
 	style="color:black">Download</a></p>
 	<div id="startSaoPauloToLocal5"></div>
 	<div id="timerSaoPaulo5"></div>
@@ -336,15 +368,18 @@
   </div>
   <div class="box">
   <div class="box5" id="55">
-    <h3>Anchorage Time <span class="flag-icon flag-icon-us"></span></h3>
+    <h4>Anchorage Time <span class="flag-icon flag-icon-us"></span></h4>
 	<p id="latlng55">61.198510,-149.981070 <button onclick="copyToClipboard('#latlng55')" class="button" style="font-size:18px"><i class="fa fa-copy"></i></button></p>
 	<p style="padding-left:20px">GPX <i class="fa fa-android"></i>&nbsp;&nbsp;<a href="https://raw.githubusercontent.com/shadow0403bsr/Timer/master/resources/Anchorage/Anchorage.gpx" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Anchorage.gpx" href="resources/Anchorage/Anchorage.gpx" style="color:black">
-	Download</a>&nbsp;&nbsp;&nbsp;&nbsp;TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Anchorage/Anchorage.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Anchorage" target="_blank" href="resources/Anchorage/Anchorage.txt" 
+	Download</a></p><p style="padding-left:20px">TXT <i class="fa fa-apple"></i>&nbsp;&nbsp;<a href="resources/Anchorage/Anchorage.txt" target="_blank" style="color:black">View</a>&nbsp;&nbsp;<a download="Anchorage" target="_blank" href="resources/Anchorage/Anchorage.txt" 
 	style="color:black">Download</a></p>
 	<div id="startAnchorageToLocal5"></div>
 	<div id="timerAnchorage5"></div>
   </div>  
   </div>
+<footer>
+  <p style="color: #C5454C;">Created by: <strong>&#9828;DarkShadow&#9828;</strong></p>
+</footer>
 </div>
 </div>
 <canvas id="canvas"></canvas>
