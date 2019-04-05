@@ -15,9 +15,6 @@ div.panel.show {
     outline: none;
     font-size: 15px;
 }
-.tzbar.active, .tzbar.accordion:hover {
-    background-color: #5EB750;
-}
 .tzbar.accordion:after {
     content: '\002B';
     color: white;
@@ -28,3 +25,12 @@ div.panel.show {
 .tzbar.active:after {
     content: "\2212";
 }
+.tztimer {
+	text-align: center;
+	background-color: #8DC4E2;
+	color: white;
+	font-size: 15px;
+	padding: 10px;
+	width: 100%;
+}
+	
