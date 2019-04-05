@@ -1,0 +1,27 @@
+ul{
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  color: white;
+  margin-bottom: 10px;
+}
+.addbutton {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+.timerDiv {
+	background: #333;
+	width: 100%;
+	color: white;
+	height: 150px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 150px;
+	margin-bottom: 10px;
+}
