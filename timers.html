@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+  	<title>
+		Bagon Community Day
+  	</title>
+  	<meta name="author" content="">
+  	<meta name="description" content="">
+  	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+  	<link rel="shortcut icon" href="./shinyBagon.ico" type="image/x-icon"/>
+    <link rel="icon" href="./shinyBagon.ico" type="image/ico"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+  	<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css" rel="stylesheet"/>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/timers.css">
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js" type="text/javascript"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.23/moment-timezone-with-data-2012-2022.js" type="text/javascript"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>  
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+</head>
+<body>
+
+<div class="top">
+	<h2>Local Time</h2>
+  <div id="displayMoment"></div>
+  <br>
+  <p style="text-align: justify; font-size: 12px;"><strong>* Local time is derived from your smarthphone / desktop time</strong><p>
+</div>
+
+<ul class="navbar">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="timeZone.html">Time Zones</a></li>
+  <li><a class="active" href="timers.html">Timers</a></li>
+  <li><a href="gpx.html">GPX Routes</a></li>
+  <li><a href="cooldown.html">CD Calculator</a></li>
+  <li><a href="tzguess.html">TZ Guess</a></li>
+  <li><a href="bagon.html">Bagon</a></li>
+  <li><a href="faq.html">FAQ</a></li>
+</ul>
+<h3 align="center"><strong>Timers</strong></h3>
+<p style="align-text: justify;">You can add upto <strong>six</strong> timers here. Click on <i class="fa fa-plus-circle fa-lg" aria-hidden="true"></i> to select the region and city for a timer.</p>
+<div id="timer0" class="timerDiv"><button class="addbutton" onclick=addTimer()><i class="fa fa-plus-circle fa-lg" aria-hidden="true" style="color: #5EB750;"></i></button></div>
+<div id="timer1" class="timerDiv"><button class="addbutton" onclick=addTimer()><i class="fa fa-plus-circle fa-lg" aria-hidden="true" style="color: #5EB750;"></i></button></div>
+<div id="timer2" class="timerDiv"><button class="addbutton" onclick=addTimer()><i class="fa fa-plus-circle fa-lg" aria-hidden="true" style="color: #5EB750;"></i></button></div>
+<div id="timer3" class="timerDiv"><button class="addbutton" onclick=addTimer()><i class="fa fa-plus-circle fa-lg" aria-hidden="true" style="color: #5EB750;"></i></button></div>
+<div id="timer4" class="timerDiv"><button class="addbutton" onclick=addTimer()><i class="fa fa-plus-circle fa-lg" aria-hidden="true" style="color: #5EB750;"></i></button></div>
+<div id="timer5" class="timerDiv"><button class="addbutton" onclick=addTimer()><i class="fa fa-plus-circle fa-lg" aria-hidden="true" style="color: #5EB750;"></i></button></div>
+<script src="js/index.js" type="text/javascript"></script>
+<script src="js/timers.js" type="text/javascript"></script>
+</body>
+</html>
