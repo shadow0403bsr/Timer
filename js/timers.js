@@ -1,5 +1,6 @@
 //using cookie library manage the cookies
-
+//Cookies.remove('userTimeZones');
+//Cookies.remove('userCities');
 function getCookie(cname) {
     var name = cname + "=";
 	var decodedCookie = decodeURIComponent(document.cookie);
@@ -154,7 +155,17 @@ function addTimer() {
 	document.getElementById(divid).style.lineHeight = 0;
 	populateSelectionMenu(divid);
 }
-
+function removeTimer() {
+	var par = $(event.target).parent().parent();
+	var divid = par.attr('id');
+	var temp = parseInt(divid.charAt(divid.length-1));
+	allTimeZones[temp] = "none";
+	tzStrings[temp] = "none";
+	Cookies.set('userTimeZones', allTimeZones.join('|'));
+	Cookies.set('userCities', tzStrings.join('|'));
+	document.getElementById(divid).innerHTML = "<button class=\"addbutton\" onclick=addTimer()><i class=\"fa fa-plus-circle fa-lg\" aria-hidden=\"true\" style=\"color: #5EB750;\"></i></button>";
+	document.getElementById(divid).style.lineHeight = 11;
+}
 function populateSelectionMenu(divid) {
 	document.getElementById(divid).innerHTML = "<div id=\"" + divID + counter + "\">" + "<select class=\"" + rtzID + counter + "\" style=\"width: 100%; visibility: hidden;\" id=\"" + rtzID + counter + "\"></select><select class=\"" + srtzID + counter + "\" style=\"width: 100%; visibility: hidden;\" id=\"" + srtzID + counter + "\"></select></div>";
 	populateMenu(divid, divID + counter, rtzID + counter, srtzID + counter);
@@ -381,19 +392,32 @@ var timerDivId1 = ["timer01", "timer11", "timer21", "timer31", "timer41", "timer
 var tzStrings = ["none", "none", "none", "none", "none", "none"];
 var startTime = "2019-04-13 15:00:00";
 var stopTime = "2019-04-13 18:00:00";
+updateFromCookies();
+function updateFromCookies() {
+	var userTimeZones = Cookies.get('userTimeZones');
+	var userCities = Cookies.get('userCities');
+	if (userTimeZones != undefined) {
+		allTimeZones = userTimeZones.split("|");
+	}
+	if (userCities != undefined) {
+		tzStrings = userCities.split("|");
+	}
+	for (var index=0; index<allTimeZones.length; index++) {
+		if(allTimeZones[index] != "none") {
+			updateDivTimer("timer" + index.toString(), allTimeZones[index], tzStrings[index]);
+			document.getElementById("timer" + index.toString()).style.lineHeight = '30px';
+		}
+	}
+}
 function updateDivTimer(td, tz, sr) {
 	var temp = parseInt(td.charAt(td.length-1));
 	allTimeZones[temp] = tz;
 	tzStrings[temp] = sr;
-	document.getElementById(td).innerHTML = "<div id=\""+ timerDivId0[temp] + "\"></div><div id=\"" + timerDivId1[temp] + "\"></div>";
-	for (var cnt = 0; cnt < allTimeZones.length; cnt++) {
-		if(allTimeZones[cnt] != "none") {
-			var eventTime = moment.tz(startTime, allTimeZones[cnt]);
-			document.getElementById(timerDivId0[cnt]).innerHTML = "<div>&nbsp;</div><strong>" + tzStrings[cnt] + "</strong><br>Event starts at: " + eventTime.local().format("YYYY-MM-DD HH:mm:ss") + " " + moment.tz(moment.tz.guess()).zoneAbbr();
-		}
-	}
-	Cookies.set('name', 'value');
-	console.log(Cookies.get('name'));
+	document.getElementById(td).innerHTML = "<button class=\"addbutton\" onclick=removeTimer() style=\"float: right;\"><i class=\"fa fa-window-close fa-lg\" aria-hidden=\"true\" style=\"color: #5EB750;\"></i></button><div id=\""+ timerDivId0[temp] + "\"></div><div id=\"" + timerDivId1[temp] + "\"></div>";
+	var eventTime = moment.tz(startTime, allTimeZones[temp]);
+	document.getElementById(timerDivId0[temp]).innerHTML = "<div>&nbsp;</div><strong>" + tzStrings[temp] + "</strong><br>Event starts at: " + eventTime.local().format("YYYY-MM-DD HH:mm:ss") + " " + moment.tz(moment.tz.guess()).zoneAbbr();
+	Cookies.set('userTimeZones', allTimeZones.join('|'));
+	Cookies.set('userCities', tzStrings.join('|'));
 }
 countdownTimer();
 function countdownTimer() {
