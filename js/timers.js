@@ -161,8 +161,8 @@ function removeTimer() {
 	var temp = parseInt(divid.charAt(divid.length-1));
 	allTimeZones[temp] = "none";
 	tzStrings[temp] = "none";
-	Cookies.set('userTimeZones', allTimeZones.join('|'));
-	Cookies.set('userCities', tzStrings.join('|'));
+	Cookies.set('userTimeZones', allTimeZones.join('|'), {expires: 10});
+	Cookies.set('userCities', tzStrings.join('|'), {expires: 10});
 	document.getElementById(divid).innerHTML = "<button class=\"addbutton\" onclick=addTimer()><i class=\"fa fa-plus-circle fa-lg\" aria-hidden=\"true\" style=\"color: #5EB750;\"></i></button>";
 	document.getElementById(divid).style.lineHeight = 11;
 }
@@ -416,8 +416,8 @@ function updateDivTimer(td, tz, sr) {
 	document.getElementById(td).innerHTML = "<button class=\"addbutton\" onclick=removeTimer() style=\"float: right;\"><i class=\"fa fa-window-close fa-lg\" aria-hidden=\"true\" style=\"color: #5EB750;\"></i></button><div id=\""+ timerDivId0[temp] + "\"></div><div id=\"" + timerDivId1[temp] + "\"></div>";
 	var eventTime = moment.tz(startTime, allTimeZones[temp]);
 	document.getElementById(timerDivId0[temp]).innerHTML = "<div>&nbsp;</div><strong>" + tzStrings[temp] + "</strong><br>Event starts at: " + eventTime.local().format("YYYY-MM-DD HH:mm:ss") + " " + moment.tz(moment.tz.guess()).zoneAbbr();
-	Cookies.set('userTimeZones', allTimeZones.join('|'));
-	Cookies.set('userCities', tzStrings.join('|'));
+	Cookies.set('userTimeZones', allTimeZones.join('|'), {expires: 10});
+	Cookies.set('userCities', tzStrings.join('|'), {expires: 10});
 }
 countdownTimer();
 function countdownTimer() {
