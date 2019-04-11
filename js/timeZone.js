@@ -42,16 +42,16 @@ countdownTimer();
 function countdownTimer() {
 	var startTime = "2019-04-13 15:00:00";
 	var stopTime = "2019-04-13 18:00:00";
-	var allTimeZones = ["Etc/GMT+12", "Etc/GMT+11", "Etc/GMT+10", "Etc/GMT+9", "Etc/GMT+8", "Etc/GMT+7", "Etc/GMT+6", "Etc/GMT+5", "Etc/GMT+4", "Etc/GMT+3", "Etc/GMT+2", "Etc/GMT+1", "Etc/GMT+0",
+	var allTimeZones = ["Etc/GMT+12", "Etc/GMT+11", "Etc/GMT+10", "Etc/GMT+9", "Etc/GMT+8", "Etc/GMT+7", "Etc/GMT+6", "Etc/GMT+5", "Etc/GMT+4", "Etc/GMT+3", "America/St_Johns", "Etc/GMT+2", "Etc/GMT+1", "Etc/GMT+0",
 						"Etc/GMT-1", "Etc/GMT-2","Etc/GMT-3", "Etc/GMT-4", "Asia/Tehran", "Etc/GMT-5", "Asia/Kolkata", "Asia/Kathmandu", "Etc/GMT-6", "Asia/Yangon", "Etc/GMT-7", "Etc/GMT-8", "Etc/GMT-9", "Australia/Adelaide", "Etc/GMT-10", "Etc/GMT-11", "Etc/GMT-12", "Etc/GMT-13", 
 						"Etc/GMT-14"]  
-	var buttonId = ["timerm12", "timerm11", "timerm10", "timerm09", "timerm08", "timerm07", "timerm06", "timerm05", "timerm04", "timerm03", "timerm02", "timerm01", "timerp00", "timerp01", "timerp02",
+	var buttonId = ["timerm12", "timerm11", "timerm10", "timerm09", "timerm08", "timerm07", "timerm06", "timerm05", "timerm04", "timerm03", "timerm2p5", "timerm02", "timerm01", "timerp00", "timerp01", "timerp02",
 					"timerp03", "timerp04", "timerp4p5", "timerp05", "timerp5p5", "timerp5p3", "timerp06", "timerp6p5", "timerp07", "timerp08", "timerp09", "timerp9p5", "timerp10", "timerp11", "timerp12", "timerp13", "timerp14"];
 	var buttonTimerId = ["displaytimerm12", "displaytimerm11", "displaytimerm10", "displaytimerm09", "displaytimerm08", "displaytimerm07", "displaytimerm06", "displaytimerm05",
-						 "displaytimerm04", "displaytimerm03", "displaytimerm02", "displaytimerm01", "displaytimerp00", "displaytimerp01", "displaytimerp02", "displaytimerp03",
+						 "displaytimerm04", "displaytimerm03", "displaytimerm2p5", "displaytimerm02", "displaytimerm01", "displaytimerp00", "displaytimerp01", "displaytimerp02", "displaytimerp03",
 						 "displaytimerp04", "displaytimerp4p5", "displaytimerp05", "displaytimerp5p5", "displaytimerp5p3", "displaytimerp06", "displaytimerp6p5", "displaytimerp07", "displaytimerp08", "displaytimerp09", "displaytimerp9p5", "displaytimerp10", "displaytimerp11", 
 						 "displaytimerp12", "displaytimerp13", "displaytimerp14"];
-	var tzStrings = ["UTC -12", "UTC -11", "UTC -10", "UTC -09", "UTC -08", "UTC -07", "UTC -06", "UTC -05", "UTC -04", "UTC -03", "UTC -02", "UTC -01", "UTC +00", "UTC +01", "UTC +02",
+	var tzStrings = ["UTC -12", "UTC -11", "UTC -10", "UTC -09", "UTC -08", "UTC -07", "UTC -06", "UTC -05", "UTC -04", "UTC -03", "UTC -02½", "UTC -02", "UTC -01", "UTC +00", "UTC +01", "UTC +02",
 					 "UTC +03", "UTC +04", "UTC +04½", "UTC +05", "UTC+05½", "UTC+05¾", "UTC +06", "UTC +06½", "UTC +07", "UTC +08", "UTC +09", "UTC +09½", "UTC +10", "UTC +11", "UTC +12", "UTC +13", "UTC +14"];
 	var now = moment.utc();
 	var distance = 0;
