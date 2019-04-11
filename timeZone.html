@@ -19,16 +19,18 @@
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.23/moment-timezone-with-data-2012-2022.js" type="text/javascript"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>  
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+  	<script src="https://unpkg.com/popper.js@1"></script>
+	<script src="https://unpkg.com/tippy.js@4"></script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136695171-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136695171-1"></script>
+	<script>
+  		window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
 
-  gtag('config', 'UA-136695171-1');
-</script>
-
+  		gtag('config', 'UA-136695171-1');
+	</script>
 </head>
 <body>
 
@@ -53,72 +55,418 @@
 <button class="tzbar accordion" id="timerp14"><strong>UTC +14</strong></button>
 <div class="panel">
 	<div id="displaytimerp14" class="tztimer"></div>
-    <p>Cities - To be added</p>
+    <div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Kiritimati&nbsp;&nbsp;<span class="flag-icon flag-icon-ki"></span>&nbsp;&nbsp;1.98715,-157.47714
+		<button class="btn" data-clipboard-text="1.98715,-157.47714">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
 </div>
 <button class="tzbar accordion" id="timerp13"><strong>UTC +13</strong></button>
 <div class="panel">
 	<div id="displaytimerp13" class="tztimer"></div>
-    <p>Cities - To be added</p>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Tongatapu&nbsp;&nbsp;<span class="flag-icon flag-icon-to"></span>&nbsp;&nbsp;-21.130901,-175.18403
+		<button class="btn" data-clipboard-text="-21.130901,-175.18403">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+    <div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Apia&nbsp;&nbsp;<span class="flag-icon flag-icon-ws"></span>&nbsp;&nbsp;-13.83136,-171.76640
+		<button class="btn" data-clipboard-text="-13.83136,-171.76640">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
 </div>
 <button class="tzbar accordion" id="timerp12"><strong>UTC +12</strong></button>
 <div class="panel">
 	<div id="displaytimerp12" class="tztimer"></div>
-    <p>Cities - To be added</p>
+    <div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Wellington&nbsp;&nbsp;<span class="flag-icon flag-icon-nz"></span>&nbsp;&nbsp;-41.28249,174.76913
+		<button class="btn" data-clipboard-text="-41.28249,174.76913">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Auckland&nbsp;&nbsp;<span class="flag-icon flag-icon-nz"></span>&nbsp;&nbsp;-36.84339,174.76709
+		<button class="btn" data-clipboard-text="-36.84339,174.76709">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
 </div>
 <button class="tzbar accordion" id="timerp11"><strong>UTC +11</strong></button>
 <div class="panel">
 	<div id="displaytimerp11" class="tztimer"></div>
-    <p>Cities - To be added</p>
+    <div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Noumea&nbsp;&nbsp;<span class="flag-icon flag-icon-nc"></span>&nbsp;&nbsp;-22.26077,166.44600
+		<button class="btn" data-clipboard-text="-22.26077,166.44600">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Magadan&nbsp;&nbsp;<span class="flag-icon flag-icon-ru"></span>&nbsp;&nbsp;59.55646,150.81718
+		<button class="btn" data-clipboard-text="59.55646,150.81718">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
 </div>
 <button class="tzbar accordion" id="timerp10"><strong>UTC +10</strong></button>
 <div class="panel">
 	<div id="displaytimerp10" class="tztimer"></div>
-    <p>Cities - To be added</p>
+    <div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Cairns&nbsp;&nbsp;<span class="flag-icon flag-icon-au"></span>&nbsp;&nbsp;-16.92061,145.77833
+		<button class="btn" data-clipboard-text="-16.92061,145.77833">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Brisbane&nbsp;&nbsp;<span class="flag-icon flag-icon-au"></span>&nbsp;&nbsp;-27.47601,153.02966
+		<button class="btn" data-clipboard-text="-27.47601,153.02966">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Sydney&nbsp;&nbsp;<span class="flag-icon flag-icon-au"></span>&nbsp;&nbsp;-33.86302,151.21535
+		<button class="btn" data-clipboard-text="-33.86302,151.21535">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Canberra&nbsp;&nbsp;<span class="flag-icon flag-icon-au"></span>&nbsp;&nbsp;-35.29810,149.13243
+		<button class="btn" data-clipboard-text="-35.29810,149.13243">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Melbourne&nbsp;&nbsp;<span class="flag-icon flag-icon-au"></span>&nbsp;&nbsp;-37.82149,144.97123
+		<button class="btn" data-clipboard-text="-37.82149,144.97123">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Hobart&nbsp;&nbsp;<span class="flag-icon flag-icon-au"></span>&nbsp;&nbsp;-42.86583,147.33182
+		<button class="btn" data-clipboard-text="-42.86583,147.33182">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+</div>
+<button class="tzbar accordion" id="timerp9p5"><strong>UTC +09½</strong></button>
+<div class="panel">
+	<div id="displaytimerp9p5" class="tztimer"></div>
+    <div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Adelaide&nbsp;&nbsp;<span class="flag-icon flag-icon-au"></span>&nbsp;&nbsp;-34.91880,138.61168
+		<button class="btn" data-clipboard-text="-34.91880,138.61168">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
 </div>
 <button class="tzbar accordion" id="timerp09"><strong>UTC +09</strong></button>
 <div class="panel">
 	<div id="displaytimerp09" class="tztimer"></div>
-    <p>Cities - To be added</p>
+    <div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Tokyo&nbsp;&nbsp;<span class="flag-icon flag-icon-jp"></span>&nbsp;&nbsp;35.66959,139.69969
+		<button class="btn" data-clipboard-text="35.66959,139.69969">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Osaka&nbsp;&nbsp;<span class="flag-icon flag-icon-jp"></span>&nbsp;&nbsp;34.65011,135.51050
+		<button class="btn" data-clipboard-text="34.65011,135.51050">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Nagoya&nbsp;&nbsp;<span class="flag-icon flag-icon-jp"></span>&nbsp;&nbsp;35.15530,136.91978
+		<button class="btn" data-clipboard-text="35.15530,136.91978">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Seoul&nbsp;&nbsp;<span class="flag-icon flag-icon-kr"></span>&nbsp;&nbsp;37.51078,127.09822
+		<button class="btn" data-clipboard-text="37.51078,127.09822">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Busan&nbsp;&nbsp;<span class="flag-icon flag-icon-kr"></span>&nbsp;&nbsp;35.15631,129.05847
+		<button class="btn" data-clipboard-text="35.15631,129.05847">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
 </div>
 <button class="tzbar accordion" id="timerp08"><strong>UTC +08</strong></button>
 <div class="panel">
 	<div id="displaytimerp08" class="tztimer"></div>
-    <p>Cities - To be added</p>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Singapore&nbsp;&nbsp;<span class="flag-icon flag-icon-sg"></span>&nbsp;&nbsp;1.28243,103.86395
+		<button class="btn" data-clipboard-text="1.28243,103.86395">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+    <div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Perth&nbsp;&nbsp;<span class="flag-icon flag-icon-au"></span>&nbsp;&nbsp;-31.95232,115.88080
+		<button class="btn" data-clipboard-text="-31.95232,115.88080">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Manila&nbsp;&nbsp;<span class="flag-icon flag-icon-ph"></span>&nbsp;&nbsp;14.58492,120.98113
+		<button class="btn" data-clipboard-text="14.58492,120.98113">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Chiayi&nbsp;&nbsp;<span class="flag-icon flag-icon-tw"></span>&nbsp;&nbsp;23.48274,120.46639
+		<button class="btn" data-clipboard-text="23.48274,120.46639">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Hong Kong&nbsp;&nbsp;<span class="flag-icon flag-icon-hk"></span>&nbsp;&nbsp;22.27773,114.16207
+		<button class="btn" data-clipboard-text="22.27773,114.16207">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Kuala Lumpur&nbsp;&nbsp;<span class="flag-icon flag-icon-my"></span>&nbsp;&nbsp;3.13100,101.67174
+		<button class="btn" data-clipboard-text="3.13100,101.67174">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
 </div>
 <button class="tzbar accordion" id="timerp07"><strong>UTC +07</strong></button>
 <div class="panel">
 	<div id="displaytimerp07" class="tztimer"></div>
-    <p>Cities - To be added</p>
+    <div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Jakarta&nbsp;&nbsp;<span class="flag-icon flag-icon-id"></span>&nbsp;&nbsp;-6.17536,106.82715
+		<button class="btn" data-clipboard-text="-6.17536,106.82715">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Bangkok&nbsp;&nbsp;<span class="flag-icon flag-icon-th"></span>&nbsp;&nbsp;13.73365,100.49702
+		<button class="btn" data-clipboard-text="13.73365,100.49702">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Ho Chi Minh City&nbsp;&nbsp;<span class="flag-icon flag-icon-vn"></span>&nbsp;&nbsp;10.77451,106.69388
+		<button class="btn" data-clipboard-text="10.77451,106.69388">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+</div>
+<button class="tzbar accordion" id="timerp6p5"><strong>UTC +06½</strong></button>
+<div class="panel">
+	<div id="displaytimerp6p5" class="tztimer"></div>
+    <div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Yangon&nbsp;&nbsp;<span class="flag-icon flag-icon-mm"></span>&nbsp;&nbsp;16.81134,96.16447
+		<button class="btn" data-clipboard-text="16.81134,96.16447">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
 </div>
 <button class="tzbar accordion" id="timerp06"><strong>UTC +06</strong></button>
 <div class="panel">
 	<div id="displaytimerp06" class="tztimer"></div>
-    <p>Cities - To be added</p>
+    <div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Dhaka&nbsp;&nbsp;<span class="flag-icon flag-icon-bd"></span>&nbsp;&nbsp;23.73598,90.39525
+		<button class="btn" data-clipboard-text="23.73598,90.39525">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Thimphu&nbsp;&nbsp;<span class="flag-icon flag-icon-bt"></span>&nbsp;&nbsp;27.50047,89.63980
+		<button class="btn" data-clipboard-text="27.50047,89.63980">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+</div>
+<button class="tzbar accordion" id="timerp5p3"><strong>UTC +05¾</strong></button>
+<div class="panel">
+	<div id="displaytimerp5p3" class="tztimer"></div>
+    <div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Kathmandu&nbsp;&nbsp;<span class="flag-icon flag-icon-np"></span>&nbsp;&nbsp;27.70526,85.30826
+		<button class="btn" data-clipboard-text="27.70526,85.30826">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+</div>
+<button class="tzbar accordion" id="timerp5p5"><strong>UTC +05½</strong></button>
+<div class="panel">
+	<div id="displaytimerp5p5" class="tztimer"></div>
+    <div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;New Delhi&nbsp;&nbsp;<span class="flag-icon flag-icon-in"></span>&nbsp;&nbsp;28.59371,77.22022
+		<button class="btn" data-clipboard-text="28.59371,77.22022">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Mumbai&nbsp;&nbsp;<span class="flag-icon flag-icon-in"></span>&nbsp;&nbsp;18.92668,72.83213
+		<button class="btn" data-clipboard-text="18.92668,72.83213">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Bangalore&nbsp;&nbsp;<span class="flag-icon flag-icon-in"></span>&nbsp;&nbsp;12.94984,77.58650
+		<button class="btn" data-clipboard-text="12.94984,77.58650">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Colombo&nbsp;&nbsp;<span class="flag-icon flag-icon-lk"></span>&nbsp;&nbsp;6.91292,79.86125
+		<button class="btn" data-clipboard-text="6.91292,79.86125">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
 </div>
 <button class="tzbar accordion" id="timerp05"><strong>UTC +05</strong></button>
 <div class="panel">
 	<div id="displaytimerp05" class="tztimer"></div>
-    <p>Cities - To be added</p>
+    <div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Malé&nbsp;&nbsp;<span class="flag-icon flag-icon-mv"></span>&nbsp;&nbsp;4.17528,73.50933
+		<button class="btn" data-clipboard-text="4.17528,73.50933">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Lahore&nbsp;&nbsp;<span class="flag-icon flag-icon-pk"></span>&nbsp;&nbsp;31.58853,74.31250
+		<button class="btn" data-clipboard-text="31.58853,74.31250">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Karachi&nbsp;&nbsp;<span class="flag-icon flag-icon-pk"></span>&nbsp;&nbsp;24.81291,67.02664
+		<button class="btn" data-clipboard-text="24.81291,67.02664">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+</div>
+<button class="tzbar accordion" id="timerp4p5"><strong>UTC +04½</strong></button>
+<div class="panel">
+	<div id="displaytimerp4p5" class="tztimer"></div>
+    <div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Kabul&nbsp;&nbsp;<span class="flag-icon flag-icon-af"></span>&nbsp;&nbsp;34.52054,69.17406
+		<button class="btn" data-clipboard-text="34.52054,69.17406">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
 </div>
 <button class="tzbar accordion" id="timerp04"><strong>UTC +04</strong></button>
 <div class="panel">
 	<div id="displaytimerp04" class="tztimer"></div>
-    <p>Cities - To be added</p>
+    <div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Dubai&nbsp;&nbsp;<span class="flag-icon flag-icon-ae"></span>&nbsp;&nbsp;25.26713,55.29020
+		<button class="btn" data-clipboard-text="25.26713,55.29020">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Muscat&nbsp;&nbsp;<span class="flag-icon flag-icon-om"></span>&nbsp;&nbsp;23.62462,58.57885
+		<button class="btn" data-clipboard-text="23.62462,58.57885">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Baku&nbsp;&nbsp;<span class="flag-icon flag-icon-az"></span>&nbsp;&nbsp;40.36833,49.84200
+		<button class="btn" data-clipboard-text="40.36833,49.84200">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Antananarivo&nbsp;&nbsp;<span class="flag-icon flag-icon-mg"></span>&nbsp;&nbsp;-18.91773,47.53068
+		<button class="btn" data-clipboard-text="-18.91773,47.53068">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Doha&nbsp;&nbsp;<span class="flag-icon flag-icon-qa"></span>&nbsp;&nbsp;25.30115,51.51720
+		<button class="btn" data-clipboard-text="25.30115,51.51720">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Jerusalem&nbsp;&nbsp;<span class="flag-icon flag-icon-il"></span>&nbsp;&nbsp;31.77796,35.21913
+		<button class="btn" data-clipboard-text="31.77796,35.21913">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
 </div>
 <button class="tzbar accordion" id="timerp03"><strong>UTC +03</strong></button>
 <div class="panel">
 	<div id="displaytimerp03" class="tztimer"></div>
-    <p>Cities - To be added</p>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Moscow&nbsp;&nbsp;<span class="flag-icon flag-icon-ru"></span>&nbsp;&nbsp;55.70239,37.52974
+		<button class="btn" data-clipboard-text="55.70239,37.52974">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+    <div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Istanbul&nbsp;&nbsp;<span class="flag-icon flag-icon-tr"></span>&nbsp;&nbsp;41.01287,28.97994
+		<button class="btn" data-clipboard-text="41.01287,28.97994">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Helsinki&nbsp;&nbsp;<span class="flag-icon flag-icon-fi"></span>&nbsp;&nbsp;60.17299,24.94523
+		<button class="btn" data-clipboard-text="60.17299,24.94523">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Athens&nbsp;&nbsp;<span class="flag-icon flag-icon-gr"></span>&nbsp;&nbsp;37.97266,23.73727
+		<button class="btn" data-clipboard-text="37.97266,23.73727">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Bucharest&nbsp;&nbsp;<span class="flag-icon flag-icon-ro"></span>&nbsp;&nbsp;44.43729,26.09026
+		<button class="btn" data-clipboard-text="44.43729,26.09026">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Kiev&nbsp;&nbsp;<span class="flag-icon flag-icon-ua"></span>&nbsp;&nbsp;50.44586,30.52725
+		<button class="btn" data-clipboard-text="50.44586,30.52725">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
 </div>
 <button class="tzbar accordion" id="timerp02"><strong>UTC +02</strong></button>
 <div class="panel">
 	<div id="displaytimerp02" class="tztimer"></div>
-    <p>Cities - To be added</p>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Paris&nbsp;&nbsp;<span class="flag-icon flag-icon-fr"></span>&nbsp;&nbsp;48.89070,2.23813
+		<button class="btn" data-clipboard-text="48.89070,2.23813">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Copenhagen&nbsp;&nbsp;<span class="flag-icon flag-icon-dk"></span>&nbsp;&nbsp;55.66230,12.56223
+		<button class="btn" data-clipboard-text="55.66230,12.56223">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Munich&nbsp;&nbsp;<span class="flag-icon flag-icon-de"></span>&nbsp;&nbsp;48.14339,11.58018
+		<button class="btn" data-clipboard-text="48.14339,11.58018">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Brussels&nbsp;&nbsp;<span class="flag-icon flag-icon-be"></span>&nbsp;&nbsp;50.84485,4.36401
+		<button class="btn" data-clipboard-text="50.84485,4.36401">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+    <div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Cape Town&nbsp;&nbsp;<span class="flag-icon flag-icon-za"></span>&nbsp;&nbsp;-33.90666,18.41900
+		<button class="btn" data-clipboard-text="-33.90666,18.41900">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Rome&nbsp;&nbsp;<span class="flag-icon flag-icon-it"></span>&nbsp;&nbsp;41.89232,12.49612
+		<button class="btn" data-clipboard-text="41.89232,12.49612">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Madrid&nbsp;&nbsp;<span class="flag-icon flag-icon-es"></span>&nbsp;&nbsp;40.42326,-3.71699
+		<button class="btn" data-clipboard-text="40.42326,-3.71699">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Bern&nbsp;&nbsp;<span class="flag-icon flag-icon-ch"></span>&nbsp;&nbsp;46.94854,7.45532
+		<button class="btn" data-clipboard-text="46.94854,7.45532">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Oslo&nbsp;&nbsp;<span class="flag-icon flag-icon-no"></span>&nbsp;&nbsp;59.90703,10.72106
+		<button class="btn" data-clipboard-text="59.90703,10.72106">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Stockholm&nbsp;&nbsp;<span class="flag-icon flag-icon-se"></span>&nbsp;&nbsp;59.33986,18.04165
+		<button class="btn" data-clipboard-text="59.33986,18.04165">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Warsaw&nbsp;&nbsp;<span class="flag-icon flag-icon-pl"></span>&nbsp;&nbsp;52.25402,21.01092
+		<button class="btn" data-clipboard-text="52.25402,21.01092">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Budapest&nbsp;&nbsp;<span class="flag-icon flag-icon-hu"></span>&nbsp;&nbsp;47.49624,19.08588
+		<button class="btn" data-clipboard-text="47.49624,19.08588">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
 </div>
 <button class="tzbar accordion" id="timerp01"><strong>UTC +01</strong></button>
 <div class="panel">
 	<div id="displaytimerp01" class="tztimer"></div>
-    <p>Cities - To be added</p>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;London&nbsp;&nbsp;<span class="flag-icon flag-icon-gb"></span>&nbsp;&nbsp;51.50122,-0.13970
+		<button class="btn" data-clipboard-text="51.50122,-0.13970">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+    <div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Lisbon&nbsp;&nbsp;<span class="flag-icon flag-icon-pt"></span>&nbsp;&nbsp;38.71618,-9.14874
+		<button class="btn" data-clipboard-text="38.71618,-9.14874">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Dublin&nbsp;&nbsp;<span class="flag-icon flag-icon-ie"></span>&nbsp;&nbsp;53.33779,-6.25900
+		<button class="btn" data-clipboard-text="53.33779,-6.25900">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
+	<div style="color: #ffffff; background-color: #666666;">&nbsp;&nbsp;Casablanca&nbsp;&nbsp;<span class="flag-icon flag-icon-ma"></span>&nbsp;&nbsp;33.59280,-7.61795
+		<button class="btn" data-clipboard-text="33.59280,-7.61795">
+    		<i class="fa fa-clipboard fa-sm" aria-hidden="true" style="color: #5EB750;"></i>
+		</button>
+	</div>
 </div>
 <button class="tzbar accordion" id="timerp00"><strong>UTC +00</strong></button>
 <div class="panel">
