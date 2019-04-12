@@ -1,4 +1,4 @@
-function sendFunction() {
+function submitFunction() {
 	try {
 		var latlng = document.getElementById("input_coordinate").value.split(",");
 		var timeZone = tzlookup(latlng[0].replace(/(^[ '\^\$\*#&]+)|([ '\^\$\*#&]+$)/g, ''), latlng[1].replace(/(^[ '\^\$\*#&]+)|([ '\^\$\*#&]+$)/g, ''));
