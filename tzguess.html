@@ -46,8 +46,22 @@
   <li><a href="bagon.html">Bagon</a></li>
   <li><a href="faq.html">FAQ</a></li>
 </ul>
-<div>&nbsp;<div>
-<img src="./resources/images/WIP.jpg" alt="Comming Soon" style="width: 100%;">
+<div>&nbsp;</div>
+<h4><strong>What is this?</strong></h4>
+<p align="justify">It is a tool which guesses the time zone from latitude and longitude.</p>
+<h4><strong>How is it helpful?</strong></h4>
+<p align="justify">
+It tells you when the Community Day will end at that place. A shiny doesn't remain shiny after the Community Day ends. 
+So if your cool down is not going to end before the Community Day ends at that place, you'll lose the shiny.
+</p>
+<h5><strong>Enter the coordinates:</strong></h5>
+<input class="coordinate" id="input_coordinate" type="text" placeholder="XX.XXXXXX,YY.YYYYYY" autocomplete="off" required>
+<div>&nbsp;</div>
+<button class="btn btn-default" id="btnSend" onclick="sendFunction()">Send</button>
+<button class="btn btn-default" id="btnClear" onclick="clearFunction()">Clear</button>
+<div id="tzguessResult" style="font-size: large;"></div>
 <script src="js/index.js" type="text/javascript"></script>
+<script src="js/tz.js" type="text/javascript"></script>
+<script src="js/tzguess.js" type="text/javascript"></script>
 </body>
 </html>
