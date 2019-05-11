@@ -30,7 +30,7 @@ function distance() {
 			dist = Math.round(dist);
 		}
 		console.log(dist);
-		if (0 < dist && dist <= 1) {
+		if (dist <= 1) {
 			console.log(dist);
 			time = 1;
 		}

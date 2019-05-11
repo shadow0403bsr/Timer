@@ -163,7 +163,7 @@ function removeTimer() {
 	tzStrings[temp] = "none";
 	Cookies.set('userTimeZones', allTimeZones.join('|'), {expires: 10});
 	Cookies.set('userCities', tzStrings.join('|'), {expires: 10});
-	document.getElementById(divid).innerHTML = "<button class=\"addbutton\" onclick=addTimer()><i class=\"fa fa-plus-circle fa-lg\" aria-hidden=\"true\" style=\"color: #5EB750;\"></i></button>";
+	document.getElementById(divid).innerHTML = "<button class=\"addbutton\" onclick=addTimer()><i class=\"fa fa-plus-circle fa-lg\" aria-hidden=\"true\" style=\"color: #FDA92C;\"></i></button>";
 	document.getElementById(divid).style.backgroundColor="#333";
 	document.getElementById(divid).style.lineHeight = 11;
 }
@@ -391,8 +391,8 @@ var timerDivId = ["timer0", "timer1", "timer2", "timer3", "timer4", "timer5"];
 var timerDivId0 = ["timer00", "timer10", "timer20", "timer30", "timer40", "timer50"];
 var timerDivId1 = ["timer01", "timer11", "timer21", "timer31", "timer41", "timer51"];
 var tzStrings = ["none", "none", "none", "none", "none", "none"];
-var startTime = "2019-04-13 15:00:00";
-var stopTime = "2019-04-13 18:00:00";
+var startTime = "2019-05-19 15:00:00";
+var stopTime = "2019-05-19 18:00:00";
 updateFromCookies();
 function updateFromCookies() {
 	var userTimeZones = Cookies.get('userTimeZones');
@@ -444,7 +444,7 @@ function countdownTimer() {
 					document.getElementById(timerDivId1[cnt]).innerHTML = "Event begins in: " + ("0" + days).slice(-2) + "d " + ("0" + hours).slice(-2) + "h " + ("0" + minutes).slice(-2) + "m " + ("0" + seconds).slice(-2) + "s ";		
 				}
 				if (distance < 0 && distance >= eventStartTime.unix() - eventStopTime.unix()) {
-					document.getElementById(timerDivId[cnt]).style.backgroundColor="#5EB750";
+					document.getElementById(timerDivId[cnt]).style.backgroundColor="#FDA92C";
 					distance = eventStopTime.unix() - now.unix();
 					days = Math.floor(distance / (60 * 60 * 24));
 					hours = Math.floor((distance % (60 * 60 * 24)) / (60 * 60));

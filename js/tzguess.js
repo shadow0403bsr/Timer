@@ -2,7 +2,7 @@ function submitFunction() {
 	try {
 		var latlng = document.getElementById("input_coordinate").value.split(",");
 		var timeZone = tzlookup(latlng[0].replace(/(^[ '\^\$\*#&]+)|([ '\^\$\*#&]+$)/g, ''), latlng[1].replace(/(^[ '\^\$\*#&]+)|([ '\^\$\*#&]+$)/g, ''));
-		var endTime = "2019-04-13 18:00:00";
+		var endTime = "2019-05-19 18:00:00";
 		var eventEndTime = moment.tz(endTime, timeZone);
 		var result = "";
 		var now = moment();
@@ -25,7 +25,7 @@ function submitFunction() {
 		else {
 			result = "The event has already ended here."
 		}
-		document.getElementById("tzguessResult").style.color = "#5EB750";
+		document.getElementById("tzguessResult").style.color = "#FDA92C";
 		document.getElementById("tzguessResult").innerHTML = "<div>&nbsp;</div>The time zone here is " + timeZone + " UTC " + eventEndTime.utcOffset()/60 + "<br>" + result;
 	}
 	catch(err) {
