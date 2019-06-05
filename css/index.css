@@ -2,9 +2,9 @@
 	margin: auto;
 	width: 100%;
 	text-align: center;
-	border: 1px solid #FDA92C;
+	border: 1px solid #D894CC;
 	color: #ffffff;
-	background-color: #FDA92C;
+	background-color: #D894CC;
 	padding: 10px;
 }
 ul.navbar {
@@ -33,6 +33,6 @@ ul.navbar li a:hover {
   text-decoration: none;
 }
 .active {
-  background-color: #FDA92C;
+  background-color: #D894CC;
   text-decoration: none;
 }
