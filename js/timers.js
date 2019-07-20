@@ -391,8 +391,8 @@ var timerDivId = ["timer0", "timer1", "timer2", "timer3", "timer4", "timer5"];
 var timerDivId0 = ["timer00", "timer10", "timer20", "timer30", "timer40", "timer50"];
 var timerDivId1 = ["timer01", "timer11", "timer21", "timer31", "timer41", "timer51"];
 var tzStrings = ["none", "none", "none", "none", "none", "none"];
-var startTime = "2019-06-08 15:00:00";
-var stopTime = "2019-06-08 18:00:00";
+var startTime = "2019-07-21 16:00:00";
+var stopTime = "2019-07-21 19:00:00";
 updateFromCookies();
 function updateFromCookies() {
 	var userTimeZones = Cookies.get('userTimeZones');
@@ -444,7 +444,7 @@ function countdownTimer() {
 					document.getElementById(timerDivId1[cnt]).innerHTML = "Event begins in: " + ("0" + days).slice(-2) + "d " + ("0" + hours).slice(-2) + "h " + ("0" + minutes).slice(-2) + "m " + ("0" + seconds).slice(-2) + "s ";		
 				}
 				if (distance < 0 && distance >= eventStartTime.unix() - eventStopTime.unix()) {
-					document.getElementById(timerDivId[cnt]).style.backgroundColor="#D894CC";
+					document.getElementById(timerDivId[cnt]).style.backgroundColor="#F995FF";
 					distance = eventStopTime.unix() - now.unix();
 					days = Math.floor(distance / (60 * 60 * 24));
 					hours = Math.floor((distance % (60 * 60 * 24)) / (60 * 60));

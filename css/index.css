@@ -2,10 +2,20 @@
 	margin: auto;
 	width: 100%;
 	text-align: center;
-	border: 1px solid #D894CC;
+	border: 1px solid #F995FF;
 	color: #ffffff;
-	background-color: #D894CC;
+	background-color: #F995FF;
 	padding: 10px;
+}
+.banner{
+	color: #ffffff;
+	background-color: #ca0000;
+	width: 100%;
+	text-align: center;
+	padding: 10px;
+}
+div.banner a{
+	color: #000000;
 }
 ul.navbar {
   list-style-type: none;
@@ -33,6 +43,6 @@ ul.navbar li a:hover {
   text-decoration: none;
 }
 .active {
-  background-color: #D894CC;
+  background-color: #F995FF;
   text-decoration: none;
 }

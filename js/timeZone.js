@@ -40,8 +40,8 @@ function setClass(els, className, fnName) {
 }
 countdownTimer();
 function countdownTimer() {
-	var startTime = "2019-06-08 15:00:00";
-	var stopTime = "2019-06-08 18:00:00";
+	var startTime = "2019-07-21 16:00:00";
+	var stopTime = "2019-07-21 19:00:00";
 	var allTimeZones = ["Etc/GMT+12", "Etc/GMT+11", "Etc/GMT+10", "Etc/GMT+9", "Etc/GMT+8", "Etc/GMT+7", "Etc/GMT+6", "Etc/GMT+5", "Etc/GMT+4", "Etc/GMT+3", "America/St_Johns", "Etc/GMT+2", "Etc/GMT+1", "Etc/GMT+0",
 						"Etc/GMT-1", "Etc/GMT-2","Etc/GMT-3", "Etc/GMT-4", "Asia/Tehran", "Etc/GMT-5", "Asia/Kolkata", "Asia/Kathmandu", "Etc/GMT-6", "Asia/Yangon", "Etc/GMT-7", "Etc/GMT-8", "Etc/GMT-9", "Australia/Adelaide", "Etc/GMT-10", "Etc/GMT-11", "Etc/GMT-12", "Etc/GMT-13", 
 						"Etc/GMT-14"]  
@@ -78,7 +78,7 @@ function countdownTimer() {
 				document.getElementById(buttonTimerId[cnt]).innerHTML = "Event begins in: " + ("0" + days).slice(-2) + "d " + ("0" + hours).slice(-2) + "h " + ("0" + minutes).slice(-2) + "m " + ("0" + seconds).slice(-2) + "s ";		
 			}
 			if (distance < 0 && distance >= eventStartTime.unix() - eventStopTime.unix()) {
-				document.getElementById(buttonId[cnt]).style.backgroundColor="#D894CC";
+				document.getElementById(buttonId[cnt]).style.backgroundColor="#F995FF";
 				distance = eventStopTime.unix() - now.unix();
 				days = Math.floor(distance / (60 * 60 * 24));
 				hours = Math.floor((distance % (60 * 60 * 24)) / (60 * 60));
