@@ -2,7 +2,7 @@ function submitFunction() {
 	try {
 		var latlng = document.getElementById("input_coordinate").value.split(",");
 		var timeZone = tzlookup(latlng[0].replace(/(^[ '\^\$\*#&]+)|([ '\^\$\*#&]+$)/g, ''), latlng[1].replace(/(^[ '\^\$\*#&]+)|([ '\^\$\*#&]+$)/g, ''));
-		var endTime = "2019-06-08 18:00:00";
+		var endTime = "2019-08-03 19:00:00";
 		var eventEndTime = moment.tz(endTime, timeZone);
 		var result = "";
 		var now = moment();

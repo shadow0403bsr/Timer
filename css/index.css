@@ -2,9 +2,9 @@
 	margin: auto;
 	width: 100%;
 	text-align: center;
-	border: 1px solid #F995FF;
+	border: 1px solid #68C6FF;
 	color: #ffffff;
-	background-color: #F995FF;
+	background-color: #68C6FF;
 	padding: 10px;
 }
 .banner{
@@ -43,6 +43,6 @@ ul.navbar li a:hover {
   text-decoration: none;
 }
 .active {
-  background-color: #F995FF;
+  background-color: #68C6FF;
   text-decoration: none;
 }
